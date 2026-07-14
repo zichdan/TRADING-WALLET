@@ -12,3 +12,45 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# Environment files
+.env
+.env.development
+.env.production
+
+# Vendor directory
+/vendor
+
+# Node.js modules
+node_modules/
+/node_modules
+
+# Cache files
+/cache
+/storage/cache
+
+# Logs
+/logs
+/storage/logs
+
+# Temporary files
+/tmp
+/temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database dumps
+*.sql
+*.bak
+*.sqlite
+
+# Large files
+*.log
+*.md
+
+# System files
+.DS_Store
+Thumbs.db
