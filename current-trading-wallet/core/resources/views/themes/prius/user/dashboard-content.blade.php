@@ -402,7 +402,7 @@
                             <hr class="w-full border-b border-dotted border-gray-600 border mb-4 mt-2">
 
                             @if ($transactions->count() > 0)
-                                <table class="datatable-skeleton-table" class="text-[#bfc9d4] text-xs md:text-sm">
+                                <table class="datatable-skeleton-table text-[#bfc9d4] text-xs md:text-sm">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -467,7 +467,7 @@
                             <hr class="w-full border-b border-dotted border-gray-600 border mb-4 mt-2">
 
                             @if ($deposits->count() > 0)
-                                <table id="datatable-skeleton-table" class="text-[#bfc9d4] text-xs md:text-sm">
+                                <table class="datatable-skeleton-table text-[#bfc9d4] text-xs md:text-sm">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -488,7 +488,7 @@
                                                 <td>{{ $deposit->method }}</td>
                                                 <td>{{ $deposit->status }}</td>
                                                 <td class="inline-flex space-x-3 md:space-x-5">
-                                                    <a href="deposits/view/{{ user('id') }}/{{ $deposit->id }}">
+                                                    <a href="deposits/view/{{ $deposit->id }}">
                                                         <svg xmlns=" http://www.w3.org/2000/svg" class="h-6 w-6"
                                                             fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                                             stroke-width="1">
@@ -540,7 +540,7 @@
                             <hr class="w-full border-b border-dotted border-gray-600 border mb-4 mt-2">
 
                             @if ($withdrawals->count() > 0)
-                                <table id="datatable-skeleton-table" class="text-[#bfc9d4] text-xs md:text-sm">
+                                <table class="datatable-skeleton-table text-[#bfc9d4] text-xs md:text-sm">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -622,14 +622,10 @@
             $('.datatable-skeleton-table').DataTable({
                 scrollX: true,
                 "sScrollXInner": "100%",
+                columns: null
             });
 
-            $('#datatable-skeleton-table-2').DataTable({
-                scrollX: true,
-                "sScrollXInner": "100%",
-            });
-
-            $(".dataTables_wrapper .dataTables_length").hide();
+            $('.dataTables_wrapper .dataTables_length').hide();
             $('.dataTables_filter').hide();
             $('.dataTables_info').hide();
             $('.dataTables_paginate').hide();

@@ -49,13 +49,13 @@ class DepositController extends Controller
     //get single deposit page
     public function view(Request $request)
     {
-        //check if deposit belongs to the user
-        if ($request->route('user_id') != user('id')) {
+        //get the deposit detail
+        $deposit = Deposit::where('id', $request->route('id'))->first();
+
+        if (!$deposit || $deposit->user_id != user('id')) {
             return redirect(route('user.deposit.index'))->with('fail', 'Unauthorized access');
         }
 
-        //get the deposit detail
-        $deposit = Deposit::where('id', $request->route('id'))->first();
         $page_title = 'View Deposit';
 
         return view('themes.' . websiteInfo('theme') . '.user.deposit.view', compact(

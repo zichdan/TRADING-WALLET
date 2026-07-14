@@ -122,10 +122,13 @@
 
 @section('script')
 <script>
-    ClassicEditor
-        .create(document.querySelector('#message'))
-        .catch(error => {
-            console.error(error);
-        });
+    var messageEl = document.querySelector('#message');
+    if (messageEl && typeof ClassicEditor !== 'undefined') {
+        ClassicEditor
+            .create(messageEl)
+            .catch(error => {
+                console.error(error);
+            });
+    }
 </script>
 @endsection

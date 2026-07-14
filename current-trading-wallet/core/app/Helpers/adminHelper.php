@@ -52,6 +52,27 @@ if (!function_exists('account')) {
 //update ENV values
 function setEnv($name, $value)
 {
+    $allowed_keys = [
+        'MAIL_MAILER',
+        'MAIL_HOST',
+        'MAIL_PORT',
+        'MAIL_USERNAME',
+        'MAIL_PASSWORD',
+        'MAIL_FROM_ADDRESS',
+        'MAIL_FROM_NAME',
+        'APP_NAME',
+        'APP_URL',
+        'TIMEZONE',
+        'QUEUE_CONNECTION',
+        'REDIS_HOST',
+        'REDIS_PASSWORD',
+        'REDIS_PORT',
+    ];
+
+    if (!in_array($name, $allowed_keys)) {
+        return;
+    }
+
     //add quotes during update for single or multiple words
     $value = '"' .$value . '"';
     

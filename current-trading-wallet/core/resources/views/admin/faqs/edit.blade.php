@@ -99,12 +99,14 @@
 @section('script')
 <script>
     //classic editor editor
-
-    ClassicEditor
-        .create(document.querySelector('#answer'))
-        .catch(error => {
-            console.error(error);
-        });
+    var answerEl = document.querySelector('#answer');
+    if (answerEl && typeof ClassicEditor !== 'undefined') {
+        ClassicEditor
+            .create(answerEl)
+            .catch(error => {
+                console.error(error);
+            });
+    }
 
     //classic editor ends here
 </script>

@@ -155,12 +155,14 @@
 @section('script')
     <script>
         //classic editor editor
-
-        ClassicEditor
-            .create(document.querySelector('#detail'))
-            .catch(error => {
-                console.error(error);
-            });
+        var detailEl = document.querySelector('#detail');
+        if (detailEl && typeof ClassicEditor !== 'undefined') {
+            ClassicEditor
+                .create(detailEl)
+                .catch(error => {
+                    console.error(error);
+                });
+        }
 
         //classic editor ends here
     </script>

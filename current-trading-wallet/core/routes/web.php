@@ -119,7 +119,7 @@ Route::prefix('user')->name('user.')->middleware(['onlyLoggedIn', 'loginOtpCheck
         //deposit route
         Route::name('deposit.')->prefix('deposits')->group(function () {
             Route::get('/', [DepositController::class, 'index'])->name('index');
-            Route::get('view/{user_id}/{id}', [DepositController::class, 'view'])->name('view');
+            Route::get('view/{id}', [DepositController::class, 'view'])->name('view');
             Route::get('new', [DepositController::class, 'deposit'])->name('new');
             Route::post('pay', [DepositController::class, 'pay'])->name('pay');
             

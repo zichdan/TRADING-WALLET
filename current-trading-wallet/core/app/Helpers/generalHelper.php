@@ -70,7 +70,26 @@ if (!function_exists('websiteInfoUpdate')) {
             return NULL;
         }
 
-        if (config('credcrypto.' . $name)) {
+        $allowed_config_keys = [
+            'trader_mode',
+            'kyc_mode',
+            'loan_mode',
+            'referral_mode',
+            'livechat',
+            'tawkto',
+            'whatsapp',
+            'custom_js',
+            'custom_css',
+            'maintenance_mode',
+            'theme',
+            'website_name',
+            'meta',
+            'logo',
+            'banner',
+            'favicon',
+        ];
+
+        if (config('credcrypto.' . $name) && in_array($name, $allowed_config_keys)) {
             $path = base_path() . '/config/credcrypto.php';
             file_put_contents($path, str_replace(
                 "'" . $name . "' => '" . config('credcrypto.' . $name) . "'",
@@ -78,7 +97,7 @@ if (!function_exists('websiteInfoUpdate')) {
                 file_get_contents($path)
             )
             );
-        } else {
+        } elseif (in_array($name, $allowed_config_keys)) {
             $path = base_path() . '/config/credcrypto.php';
             $old_content = file_get_contents($path);
             $new_content = str_replace('];', '', $old_content);

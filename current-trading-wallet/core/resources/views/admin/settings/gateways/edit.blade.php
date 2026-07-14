@@ -245,11 +245,14 @@
 
 {{--  text editor --}}
 <script>
-    ClassicEditor
-        .create(document.querySelector('#payment_instruction'))
-        .catch(error => {
-            console.error(error);
-        });
+    var paymentEl = document.querySelector('#payment_instruction');
+    if (paymentEl && typeof ClassicEditor !== 'undefined') {
+        ClassicEditor
+            .create(paymentEl)
+            .catch(error => {
+                console.error(error);
+            });
+    }
 </script>
 
 @endsection

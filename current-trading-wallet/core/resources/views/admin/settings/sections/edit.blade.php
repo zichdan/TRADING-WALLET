@@ -592,10 +592,13 @@
 
 @section('script')
     <script>
-        ClassicEditor
-            .create(document.querySelector('#section_text'))
-            .catch(error => {
-                console.error(error);
-            });
+        var sectionEl = document.querySelector('#section_text');
+        if (sectionEl && typeof ClassicEditor !== 'undefined') {
+            ClassicEditor
+                .create(sectionEl)
+                .catch(error => {
+                    console.error(error);
+                });
+        }
     </script>
 @endsection
