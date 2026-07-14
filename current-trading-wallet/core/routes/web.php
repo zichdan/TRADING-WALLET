@@ -27,19 +27,13 @@ use Illuminate\Support\Facades\Storage;
 |
  */
 
-// Development Routes starts here. This won't be used in production
+// Development Routes removed for security
 use Illuminate\Support\Facades\Route;
 
 
-//php info
+//php info - disabled for security
 Route::get('php', function () {
-    if(env('APP_DEBUG') == true) {
-        phpinfo();
-    } else {
-        return redirect(url('/'));
-    }
-    
-    
+    return redirect(url('/'));
 })->name('php');
 
 
@@ -56,24 +50,18 @@ Route::get('blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('blog/{slug}', [HomeController::class, 'blogDetail'])->name('blog-detail');
 Route::post('subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
 
-//Queue Route
+//Queue Route - disabled for security
 Route::get('queue', function () {
-    //requeue failed jobs
-    $failed = Illuminate\Support\Facades\Artisan::call('queue:retry all');
-    //return Illuminate\Support\Facades\Artisan::call('queue:work', ['--stop-when-empty' => true]);
-    //stop existing jobs
-    $stop = Illuminate\Support\Facades\Artisan::call('queue:restart');
-    //start queue again
-    $start = Illuminate\Support\Facades\Artisan::call('queue:work');
-    return 'Queue Started successfully';
+    return redirect(url('/'));
 })->name('queue');
 
 /***********
- * Cache routes here,
- * would be moved to moved to controller or add
- * a redirect function when used in production
+ * Cache route - restricted to admin only
  */
 Route::get('clear-cache', function () {
+    if (!session()->has('admin_login')) {
+        abort(403);
+    }
     $cache = Illuminate\Support\Facades\Artisan::call('optimize:clear');
     return redirect(url()->previous());
 })->name('clear-cache');
@@ -205,5 +193,8 @@ Route::get('setlocale', function(){
     $locale = request()->locale ?? 'en';
     session()->put('locale', $locale);
     $url = request()->return_to;
-    return redirect($url);
+    if ($url && filter_var($url, FILTER_VALIDATE_URL) === false) {
+        return redirect($url);
+    }
+    return redirect(url('/'));
 })->name('setlocale');

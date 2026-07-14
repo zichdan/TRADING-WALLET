@@ -27,10 +27,6 @@ class CustomFunctionController extends Controller
     //validate 
     public function customPhpValidate(Request $request)
     {
-        $path = app_path('Helpers/customFunction.php');
-        $custom_php_codes = \file_put_contents($path, $request->custom_php);
-
-        return \response('success', 200);
-
+        return back()->with('fail', 'Custom PHP editing is disabled for security reasons.');
     }
 }

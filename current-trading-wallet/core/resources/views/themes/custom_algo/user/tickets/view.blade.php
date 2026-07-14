@@ -130,7 +130,7 @@ return $is_image;
                             </div>
                         </div>
                         <div class="bg-gray-700 p-4 rounded-sm">
-                            <p class="italic">{!! $reply->reply !!}</p>
+                            <p class="italic">{{ $reply->reply }}</p>
                         </div>
                     </div>
                     @else
@@ -149,7 +149,7 @@ return $is_image;
                             </div>
                         </div>
                         <div class="bg-gray-700 p-4 rounded-sm">
-                            <p class="italic">{!! $reply->reply !!}</p>
+                            <p class="italic">{{ $reply->reply }}</p>
                         </div>
                     </div>
                     @endif
