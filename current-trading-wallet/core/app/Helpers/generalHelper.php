@@ -124,6 +124,7 @@ if (!function_exists('countryList')) {
     function countryList()
     {
         return [
+            'countries' => [
             ['name' => 'United States', 'code' => 'US'],
             ['name' => 'United Kingdom', 'code' => 'GB'],
             ['name' => 'Canada', 'code' => 'CA'],
@@ -223,6 +224,7 @@ if (!function_exists('countryList')) {
             ['name' => 'Bahamas', 'code' => 'BS'],
             ['name' => 'New Zealand', 'code' => 'NZ'],
             ['name' => 'Fiji', 'code' => 'FJ'],
+            ]
         ];
     }
 }
@@ -324,7 +326,22 @@ if (!function_exists('uploadImagePublic')) {
 if (!function_exists('getCurrency')) {
     function getCurrency()
     {
-        return ['USD', 'EUR', 'GBP', 'NGN', 'CAD', 'AUD', 'INR', 'PKR', 'BRL', 'ZAR', 'KES', 'GHS', 'AED', 'SAR', 'MYR', 'SGD', 'JPY', 'CNY', 'KRW', 'TRY', 'RUB', 'UAH', 'EGP', 'MAD', 'PHP', 'IDR', 'VND', 'THB', 'BDT', 'LKR', 'NPR', 'TZS', 'UGX', 'XOF', 'ETB', 'ZMW', 'NAD', 'BWP', 'RWF'];
+        $codes = ['USD', 'EUR', 'GBP', 'NGN', 'CAD', 'AUD', 'INR', 'PKR', 'BRL', 'ZAR', 'KES', 'GHS', 'AED', 'SAR', 'MYR', 'SGD', 'JPY', 'CNY', 'KRW', 'TRY', 'RUB', 'UAH', 'EGP', 'MAD', 'PHP', 'IDR', 'VND', 'THB', 'BDT', 'LKR', 'NPR', 'TZS', 'UGX', 'XOF', 'ETB', 'ZMW', 'NAD', 'BWP', 'RWF'];
+        $names = [
+            'USD' => 'US Dollar', 'EUR' => 'Euro', 'GBP' => 'British Pound', 'NGN' => 'Nigerian Naira',
+            'CAD' => 'Canadian Dollar', 'AUD' => 'Australian Dollar', 'INR' => 'Indian Rupee', 'PKR' => 'Pakistani Rupee',
+            'BRL' => 'Brazilian Real', 'ZAR' => 'South African Rand', 'KES' => 'Kenyan Shilling', 'GHS' => 'Ghanaian Cedi',
+            'AED' => 'UAE Dirham', 'SAR' => 'Saudi Riyal', 'MYR' => 'Malaysian Ringgit', 'SGD' => 'Singapore Dollar',
+            'JPY' => 'Japanese Yen', 'CNY' => 'Chinese Yuan', 'KRW' => 'Korean Won', 'TRY' => 'Turkish Lira',
+            'RUB' => 'Russian Ruble', 'UAH' => 'Ukrainian Hryvnia', 'EGP' => 'Egyptian Pound', 'MAD' => 'Moroccan Dirham',
+            'PHP' => 'Philippine Peso', 'IDR' => 'Indonesian Rupiah', 'VND' => 'Vietnamese Dong', 'THB' => 'Thai Baht',
+            'BDT' => 'Bangladeshi Taka', 'LKR' => 'Sri Lankan Rupee', 'NPR' => 'Nepalese Rupee', 'TZS' => 'Tanzanian Shilling',
+            'UGX' => 'Ugandan Shilling', 'XOF' => 'West African CFA Franc', 'ETB' => 'Ethiopian Birr', 'ZMW' => 'Zambian Kwacha',
+            'NAD' => 'Namibian Dollar', 'BWP' => 'Botswana Pula', 'RWF' => 'Rwandan Franc',
+        ];
+        return array_map(function ($code) use ($names) {
+            return ['currency_code' => $code, 'currency_name' => $names[$code] ?? $code];
+        }, $codes);
     }
 }
 

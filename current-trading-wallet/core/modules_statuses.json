@@ -2,6 +2,6 @@
     "ManualDeposit": true,
     "SupportTicket": true,
     "KYC": true,
-    "P2pTransfer": false,
+    "P2pTransfer": true,
     "CryptoTrading": true
 }
