@@ -17,7 +17,7 @@ class InstallationController extends Controller
     //installation index
     public function index()
     {
-        $page_title = 'Intallation Wizard by CredCrypto';
+        $page_title = 'Installation Wizard by TradingWallet';
 
         return view('install.index', compact(
             'page_title',

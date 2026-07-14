@@ -25,9 +25,9 @@ $config = [
     |-----------------------|
     */
 
-    "author_name" => "CredCrypto",
-    "author_email" => "support@credcrypto.net",
-    "author_website" => "https://credcrypto.net",
+    "author_name" => "TradingWallet",
+    "author_email" => "support@tradingwallet.net",
+    "author_website" => "https://tradingwallet.net",
 
     /*
     |-----------------------|

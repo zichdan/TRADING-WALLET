@@ -11,8 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> {{ ct($page_title, 'c') }} | {{ websiteInfo('website_name') }}</title>
-    <meta name="author" content="support@credcrypto.net">
-    <meta name="author" content="support@credcrypto.net">
+    <meta name="author" content="support@tradingwallet.net">
+    <meta name="author" content="support@tradingwallet.net">
     <meta name="description" content="{{ json_decode(websiteInfo('meta'))->description }}">
     <meta name="keywords" content="{{ json_decode(websiteInfo('meta'))->keywords }}">
     {{-- Open Graph / Facebook --}}

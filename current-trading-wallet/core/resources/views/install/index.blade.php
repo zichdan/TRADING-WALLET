@@ -54,7 +54,7 @@
 
             {{-- Greeting --}}
             <div class="w-full">
-                <h3 class="w-full text-center text-[#eaecf1] font-bold md:text-lg mt-3">CREDCRYPTO INSTALLER</h3>
+                <h3 class="w-full text-center text-[#eaecf1] font-bold md:text-lg mt-3">TRADINGWALLET INSTALLER</h3>
             </div>
 
             {{-- Terms of use --}}
@@ -70,17 +70,17 @@
                     </div>
                 </div>
                 <p class="font-medium text-sm md:text-base pl-6">
-                    Thank you for purchasing a copy of CredHYIP, the best HYIP management script in the market. This script was carefully crafted by Traders for Traders.
+                    Thank you for purchasing a copy of TradingWallet, the best trading wallet management script in the market. This script was carefully crafted by Traders for Traders.
                     <br>
-                    Before proceeding to install this script, kindly <a class="text-lg underline hover:text-[#324152]" href="https://credcrypto.net">visit</a> to activate your copy and get your license key. Each purchase can only be used to activate a single license key. Beware that you can only use this script on a single domain at time
+                    Before proceeding to install this script, kindly <a class="text-lg underline hover:text-[#324152]" href="https://tradingwallet.net">visit</a> to activate your copy and get your license key. Each purchase can only be used to activate a single license key. Beware that you can only use this script on a single domain at time
                     <br>
-                    For support and existence, <a class="text-lg underline hover:text-[#324152]" href="https://credcrypto.net">visit</a> and create a support ticket.
+                    For support and existence, <a class="text-lg underline hover:text-[#324152]" href="https://tradingwallet.net">visit</a> and create a support ticket.
                 </p>
 
                 <p class="font-medium text-sm md:text-base pl-6 mt-2">
-                    Before proceeding to install this script, kindly <a class="text-lg underline hover:text-[#324152]" href="https://credcrypto.net">visit</a> to activate your copy and get your license key. Each purchase can only be used to activate a single license key. Beware that you can only use this script on a single domain at time
+                    Before proceeding to install this script, kindly <a class="text-lg underline hover:text-[#324152]" href="https://tradingwallet.net">visit</a> to activate your copy and get your license key. Each purchase can only be used to activate a single license key. Beware that you can only use this script on a single domain at time
                     <br>
-                    For support and existence, <a class="text-lg underline hover:text-[#324152]" href="https://credcrypto.net">visit</a> and create a support ticket.
+                    For support and existence, <a class="text-lg underline hover:text-[#324152]" href="https://tradingwallet.net">visit</a> and create a support ticket.
                 </p>
             </div>
 

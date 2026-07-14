@@ -34,8 +34,8 @@ if (!function_exists('websiteInfo')) {
         }
 
         //for cached config
-        if (config('credcrypto.' . $name)) {
-            return config('credcrypto.' . $name);
+        if (config('tradingwallet.' . $name)) {
+            return config('tradingwallet.' . $name);
         }
 
         // for livechat js only
@@ -89,16 +89,16 @@ if (!function_exists('websiteInfoUpdate')) {
             'favicon',
         ];
 
-        if (config('credcrypto.' . $name) && in_array($name, $allowed_config_keys)) {
-            $path = base_path() . '/config/credcrypto.php';
+        if (config('tradingwallet.' . $name) && in_array($name, $allowed_config_keys)) {
+            $path = base_path() . '/config/tradingwallet.php';
             file_put_contents($path, str_replace(
-                "'" . $name . "' => '" . config('credcrypto.' . $name) . "'",
+                "'" . $name . "' => '" . config('tradingwallet.' . $name) . "'",
                 "'" . $name . "' => '" . $value . "'",
                 file_get_contents($path)
             )
             );
         } elseif (in_array($name, $allowed_config_keys)) {
-            $path = base_path() . '/config/credcrypto.php';
+            $path = base_path() . '/config/tradingwallet.php';
             $old_content = file_get_contents($path);
             $new_content = str_replace('];', '', $old_content);
             $insert = "    '" . $name . "' => '" . $value . "',";

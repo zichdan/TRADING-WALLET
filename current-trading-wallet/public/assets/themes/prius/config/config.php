@@ -26,8 +26,8 @@ $config = [
     */
 
     "author_name" => "Ichie_ICT_Solutions",
-    "author_email" => "support@credcrypto.net",
-    "author_website" => "https://credcrypto.net",
+    "author_email" => "support@tradingwallet.net",
+    "author_website" => "https://tradingwallet.net",
 
     /*
     |-----------------------|

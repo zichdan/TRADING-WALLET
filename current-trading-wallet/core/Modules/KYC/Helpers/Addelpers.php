@@ -3,20 +3,7 @@
 if (!function_exists('checkAddon')) {
 	function checkAddon($addon)
 	{
-		$base_curl = 'https://api.credcrypto.net';
-		$request_origin = env('BASE_TEST');
-		$url = $base_curl . '/v1/addons/' . $addon;
-		$curl = curl_init($url);
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		$headers = ['request-origin: ' . $request_origin, 'theme:' . websiteInfo('theme')];
-		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-		$resp = curl_exec($curl);
-		curl_close($curl);
-		$resp = json_decode($resp, true);
-		return $resp;
+		return ['status' => 'success'];
 	}
 }
 
@@ -193,43 +180,27 @@ if (!function_exists('getLoans')) {
 if (!function_exists('processLoan')) {
 	function processLoan($loan_id, $loan_action, $rpd)
 	{
-		$base_curl = env('BASE_CURL');
-		$request_origin = env('BASE_TEST');
-		$url = $base_curl . '/v1/loan';
-		$curl = curl_init($url);
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		$headers = ['request-origin: ' . $request_origin, 'loan-id: ' . $loan_id, 'action: ' . $loan_action, 'rpd: ' . $rpd];
-		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-		$resp = curl_exec($curl);
-		curl_close($curl);
-		$resp = json_decode($resp, true);
-
-		if ($resp['action'] ?? false) {
-			$change_status = Modules\CryptoLoan\Entities\Loan::find($resp['loan_id']);
-			$change_status->status = $resp['action'];
+		if ($loan_action == 'reject') {
+			$change_status = Modules\CryptoLoan\Entities\Loan::find($loan_id);
+			$change_status->status = 'rejected';
 			$change_status->save();
-			$message = 'rejected';
-			sendLoanProcessedEmail($resp['loan_id']);
-			return $message;
+			sendLoanProcessedEmail($loan_id);
+			return 'rejected';
 		}
-		else if ($resp['action'] ?? false) {
-			$loan = Modules\CryptoLoan\Entities\Loan::where('id', $resp['loan_id'])->first();
+		else if ($loan_action == 'approve') {
+			$loan = Modules\CryptoLoan\Entities\Loan::where('id', $loan_id)->first();
 			$borrower = App\Models\User::where('id', $loan->user_id)->first();
 			$new_bal = $borrower->account_bal + $loan->amount;
 			$credit = App\Models\User::find($borrower->id);
 			$credit->account_bal = $new_bal;
 			$credit->save();
-			$change_status = Modules\CryptoLoan\Entities\Loan::find($resp['loan_id']);
-			$change_status->status = $resp['action'];
-			$change_status->repayment_date = $resp['repayment_date'];
+			$change_status = Modules\CryptoLoan\Entities\Loan::find($loan_id);
+			$change_status->status = 'approved';
+			$change_status->repayment_date = $rpd;
 			$change_status->save();
 			recordNewTransaction($loan->user_id, 'credit', $loan->amount, 'Loan', $new_bal, 'Loan Credited');
-			sendLoanProcessedEmail($resp['loan_id']);
-			$message = 'approved';
-			return $message;
+			sendLoanProcessedEmail($loan_id);
+			return 'approved';
 		}
 	}
 }
@@ -327,38 +298,28 @@ if (!function_exists('updateFlutterwave')) {
 if (!function_exists('processUserId')) {
 	function processUserId($document_id, $action, $comment)
 	{
-		$comment = str_replace(' ', '+', $comment);
-		$base_curl = env('BASE_CURL');
-		$request_origin = env('BASE_TEST');
-		$url = $base_curl . '/v1/id';
-		$curl = curl_init($url);
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		$headers = ['request-origin: ' . $request_origin, 'document-id: ' . $document_id, 'comment: ' . $comment, 'action: ' . $action];
-		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-		$resp = curl_exec($curl);
-		curl_close($curl);
-		$resp = json_decode($resp, true);
+		if (!$document_id) {
+			return false;
+		}
 
-
-		$process_id = Modules\KYC\Entities\IdVerification::find($resp['document_id']);
-		$process_id->comment = $resp['comment'];
+		$process_id = Modules\KYC\Entities\IdVerification::find($document_id);
+		if (!$process_id) {
+			return false;
+		}
+		$process_id->comment = $comment;
 		$process_id->save();
 
-		if ($resp['action'] == 'reject') {
+		if ($action == 'reject') {
 			$user_verify_status = 'rejected';
 		}
 		else {
 			$user_verify_status = 'verified';
 		}
 
-		$user_id = Modules\KYC\Entities\IdVerification::where('id', $resp['document_id'])->first();
-		$update_user = App\Models\User::find($user_id->user_id);
+		$update_user = App\Models\User::find($process_id->user_id);
 		$update_user->id_verified = $user_verify_status;
 		$update_user->save();
-		sendIdProcessedEmail($user_id->user_id, $user_verify_status, $resp['comment']);
+		sendIdProcessedEmail($process_id->user_id, $user_verify_status, $comment);
 		return true;
 	}
 }
