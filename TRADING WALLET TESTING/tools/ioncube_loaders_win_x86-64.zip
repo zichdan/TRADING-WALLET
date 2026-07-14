@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="ISO-8859-1">
+
+
+
+
+
+
+
+
+
+
+    
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "lq9cdamw29");
+</script>
+    
+
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/669fa530becc2fed69295b2b/1i3fpqh6m';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script> 
+
+
+
+    <title>ionCube PHP Encoder - Secure code with powerful Encryption, Obfuscation, and Licensing</title>
+
+
+
+    <meta name="description" content="ionCube PHP Encoder 15 - Protect and encode PHP with encryption keys, obfuscation and code licensing. Set IP, domain and MAC restricted licenses.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link type="text/css" rel="stylesheet" href="/css/fonts/inter/inter.css?1781702475" />
+<link type="text/css" rel="stylesheet" href="/css/font.css?1781702475" />
+
+<link type="text/css" rel="stylesheet" href="/assets/css/vendor.min.css?1704812232" />
+
+
+<link type="text/css" rel="stylesheet" href="/assets/css/styles.min.css?1781702475" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript" src="https://s3.eu-west-1.amazonaws.com/static.ioncube.com/images/vendor.min.js?1704815250" defer></script>
+
+<script language="JavaScript" type="text/javascript" src="/assets/js/core.min.js?1781176423" defer></script>
+
+
+
+            <script language="JavaScript" type="text/javascript" src="/assets/js/public.live.vue.js?1774443823" defer></script>
+    
+
+    <script>
+        
+            document.addEventListener("DOMContentLoaded", function() {
+                new ClickTracker();
+            });
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F1KFLPF6WF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F1KFLPF6WF');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<body class="">
+
+
+
+
+
+
+
+
+	
+
+<span id="vue-data"
+	data-currency-code="USD" data-currency-symbol="$"
+	data-ccy="USD" data-ccys="$"
+	data-gbp-sign="£"
+	data-usd-sign="$"
+	data-show-mac=""
+	data-csrf-token="cce01996fa5c7406019c2d9f2a4f0e7a"
+	data-rpv=""
+	data-rpv-csrf-token=""
+	data-rpc-csrf-token="14d161cae84a2111651957b5bb6e2663"
+	data-is-logged-in=""
+	data-random-key=1928129921
+	data-accounts-page-name="Orders & Downloads"
+></span>
+
+<div id="app" style="">
+	<toast-view></toast-view>
+	
+    
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top" style="border-radius:0px; " data-stable-root >
+    <div class="container-fluid  nav-public" >
+        
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            
+                            <div class="navbar-button visible-xs visible-sm" style="float: right; margin-right:8px;">
+                    <a href="/purchase.php" class="btn btn-success btn-sm" style="" data-element-id="navbar-purchase-xs"><span style="font-size:15px">Purchase</span></a>
+                </div>
+            
+            
+            <div class="navbar-left col-xs-3" style="padding: 5px 5px 5px 0px">
+                <a href="/"><img class="brand-image" src="/images/logo_text/ioncube_logo.webp" width="220" height="38" alt="ionCube logo"></a>
+            </div>
+            
+                
+            
+        </div>
+        
+        
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav p-0" style="">
+                                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                    <ul class="dropdown-menu top-level-menu" role="menu">
+                        
+                        <li class="dropdown dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" tabindex="-1" >PHP Encoder</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/php_encoder.php">Details</a></li>
+                                <li><a href="/php_encoder.php?page=pricing">Pricing</a></li>
+                                <li><a href="/encoder_eval_download.php">Free Trial</a></li>
+                                <li><a href="/purchase.php">Purchase</a></li>
+                                                                    <li class="divider"></li>
+                                    <li><a href="/online_encoder.php">Online Encoder</a></li>
+                                                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" tabindex="-1" >Package Foundry</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ipf/">Details</a></li>
+                                <li><a href="/ipf/eval_download.php">Free Trial</a></li>
+                                <li><a href="/purchase.php">Purchase</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" tabindex="-1" >Bundler</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/bundler/">Details</a></li>
+                                <li><a href="/bundler/eval_download.php">Free Trial</a></li>
+                                <li><a href="/purchase.php">Purchase</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" tabindex="-1" target="ic24">ionCube24</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="ic24menu" href="https://ioncube24.com" target="ic24"><i>Realtime website<br>intrusion protection<br>and error reporting</i></a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="/loaders.php">Loaders</a></li>
+                    </ul>
+                </li>
+
+                					
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pricing<span class="caret"></span></a>
+                        <ul class="dropdown-menu top-level-menu">
+                            <li><a href="/php_encoder.php?page=pricing">PHP Encoder</a></li>
+                            <li><a href="/ipf/">Package Foundry</a></li>
+                            <li><a href="/bundler/">Bundler</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Online Licensing <span class="nav_badge ic_red">New!</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu top-level-menu">
+                            <li><a href="/online_licensing.php">Find Out More</a></li>
+                                                            <li><a href="/online_licensing_plans.php">Plans</a></li>
+                                                        <li><a href="/online_licensing_faq.php">FAQ</a></li>
+                            <li><a href="/online_licensing_guide.php">Guide</a></li>
+                        </ul>
+                    </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support<span class="caret"></span></a>
+                    <ul class="dropdown-menu top-level-menu">
+
+                                                    <li><a href="/contact.php">Contact Us</a></li>
+                                                
+                        <li><a href="/faq.php">FAQ</a></li>
+
+                        <li class="divider"></li>
+
+                        <li><a href="/sa_encoder.php?page=support">Support Plans</a></li>
+                        <li><a href="https://support.ioncube.com" target="ioncube-support">Helpdesk</a></li>
+                        <li><a href="https://forum2.ioncube.com/" target="_blank">Forum</a></li>
+                        <li><a href="/feature-request.php">Feature Requests</a></li>
+
+                        <li class="divider"></li>
+
+                        <li><a href="https://www.ioncube.com/sa/gui_docs/" target="_blank">GUI User Guide (Windows/Mac)</a></li>
+                        <li><a href="https://www.ioncube.com/sa/USER-GUIDE.pdf" target="_blank">CLI User Guide (Linux)</a></li>
+
+                        <li class="divider"></li>
+
+                        
+                        <li class="dropdown dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" tabindex="-1" id="blog-link">Blog Tutorials</a>
+                            <ul class="hidden-sm dropdown-menu" style="left: -315px; top: 30px;">
+                                <div class="nav_panel_blog">
+                                    <div class="flex_horizontal_space align_center">
+                                        <div class="title">Suggested Articles</div>
+                                        <a class="btn btn-info" href="https://blog.ioncube.com/category/tutorials/" target="ioncube-blog">Go to blog <i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="item_container">
+                                                                                    <div class="item">
+                                                <a href="https://blog.ioncube.com/2017/09/22/ioncube-docker-support/" target="ioncube-blog">
+                                                    <img src="/images/blog/navbar/ci.png" alt="Go to blog page">
+                                                </a>
+                                                <div class="title text-center">CI/CD Encoding Containers</div>
+                                            </div>
+                                                                                    <div class="item">
+                                                <a href="https://blog.ioncube.com/2017/10/02/ioncube-encoder-dynamic-external-keys/" target="ioncube-blog">
+                                                    <img src="/images/blog/navbar/keys.png" alt="Go to blog page">
+                                                </a>
+                                                <div class="title text-center">Advanced Keys Protection</div>
+                                            </div>
+                                                                                    <div class="item">
+                                                <a href="https://blog.ioncube.com/2016/12/19/ioncube-encoding-laravel-project-controllers-models-templates/" target="ioncube-blog">
+                                                    <img src="/images/blog/navbar/laravel.png" alt="Go to blog page">
+                                                </a>
+                                                <div class="title text-center">Encoding for Laravel</div>
+                                            </div>
+                                                                                    <div class="item">
+                                                <a href="https://blog.ioncube.com/2019/09/10/using-symfony-with-ioncube-encoder/" target="ioncube-blog">
+                                                    <img src="/images/blog/navbar/symfony.png" alt="Go to blog page">
+                                                </a>
+                                                <div class="title text-center">Encoding for Symfony</div>
+                                            </div>
+                                                                                    <div class="item">
+                                                <a href="https://blog.ioncube.com/2016/08/23/faq-encoding-wordpress-plugin/" target="ioncube-blog">
+                                                    <img src="/images/blog/navbar/wordpress.png" alt="Go to blog page">
+                                                </a>
+                                                <div class="title text-center">Encode a Wordpress Plugin</div>
+                                            </div>
+                                                                                    <div class="item">
+                                                <a href="https://blog.ioncube.com/2014/10/28/ioncube-licensing/" target="ioncube-blog">
+                                                    <img src="/images/blog/navbar/enc_licensing.png" alt="Go to blog page">
+                                                </a>
+                                                <div class="title text-center">Setting Up Licensing</div>
+                                            </div>
+                                                                            </div>
+                                </div>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right nav-login p-0">
+                                    <div class="navbar-button hidden-xs hidden-sm">
+                        <li><a href="/purchase.php" class="btn btn-success btn-sm" style="" data-element-id="navbar-purchase-lg"><span style="color: white; font-size:16px">Purchase</span></a></li>
+                    </div>
+
+                                            <li><a href="/news.php" data-element-id="navbar-news">News</a></li>
+		                                <li><a href="/login_page.php" class="top-level" data-element-id="navbar-login-lg">Login</a></li>
+                            </ul>
+        </div> 
+    </div> 
+    
+	
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+	
+<div class="">
+    <div class="body_main" style="padding-bottom: 0px" data-stable-root>
+        <div class="home_page" style="padding-bottom:0px">
+            <div class="panel" id="marquee">
+                <h1 class="title">PHP ENCODER 15</h1>
+                <div class="subtitle">WITH PHP 8.5 RUNTIME&nbsp;SUPPORT</div>
+                                    <div class="subsubtitle">
+                        <span class="subsubtitle-pill">
+                            Encode PHP 8.2-8.4 syntax and run on PHP 8.5
+                        </span>
+                    </div>
+                                <div class="description">Secure your code with the most widely trusted PHP protection tool</div>
+                <div class="features">
+                    <div><span class="bullet_point hide">&#x2022;</span>Unlimited Encoding</div>
+                    <span class="separator">|</span>
+                    <div><span class="bullet_point hide">&#x2022;</span>Unlimited Runtime Machines</div>
+                    <span class="separator">|</span>
+                    <div><span class="bullet_point hide">&#x2022;</span>PHP 5, 7 & 8 Support</div>
+                </div>
+                
+                <div class="button_group">
+                    <a href="/purchase.php" class="btn btn-special btn-lg btn-resp">Buy Now</a>
+                    <a href="/php_encoder.php" class="btn btn-secondary btn-lg btn-resp">Find Out More</a>
+                    <a href="/encoder_eval_download.php" class="btn btn-info btn-lg btn-resp">Free Trial</a>
+                </div>
+                
+                <div class="" id="marquee_cards">
+                    <div class="card_panel">
+                        <div class="card">
+                            <div class="title">Bytecode Protection</div>
+                            <div class="body">Safeguard your intellectual property</div>
+                        </div>
+                        <div class="card">
+                            <div class="title">CI/CD Pipeline Support</div>
+                            <div class="body">Seamless integration into modern devops</div>
+                        </div>
+                        <div class="card">
+                            <div class="title">Online Licensing</div>
+                            <div class="body">Control access with flexible, powerful licensing</div>
+                        </div>
+                    </div>
+                    <div class="card_panel">
+                        <div class="card">
+                            <div class="title">Advanced Protection</div>
+                            <div class="body">Use powerful dynamic encryption keys with custom generators to protect code</div>
+                        </div>
+                        <div class="card">
+                            <div class="title">CLI and GUI Options</div>
+                            <div class="body">Command-line support for all platforms and GUI support on Win/MacOS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel" id="marquee_sub">
+                <div class="features standard_body">
+                    <div><span class="bullet_point hide">&#x2022;</span>Compiled Bytecode Protection</div>
+                    <span class="separator">&#x2022;</span>
+                    <div><span class="bullet_point hide">&#x2022;</span>CI/CD Support for Automation</div>
+                    <span class="separator">&#x2022;</span>
+                    <div><span class="bullet_point hide">&#x2022;</span>NEW Online License Manager</div>
+                    <div><span class="bullet_point hide">&#x2022;</span>Advanced Dynamic Key Encryption</div>
+                    <span class="separator">&#x2022;</span>
+                    <div><span class="bullet_point hide">&#x2022;</span>CLI options & GUI support on Win/MacOS</div>
+                </div>
+            </div>
+            
+            <div class="panel" id="testi">
+                <div class="panel_title">Find out why developers use ionCube</div>
+                <home-testimonial-slide :testimonials='[{"author":"Joe A","date":"Sep 2023","sound_bite":"I wholeheartedly recommend this software to anyone in need of encoding. The customer support from ionCube is world-class.","full_text":["We are a software developer specializing in building applications for eCommerce and other custom requirements. For over 15 years, we have been using ionCube to protect our core proprietary code. We have tried other software to encrypt our scripts, but by far, ionCube is the best. I wholeheartedly recommend this software to anyone in need of encoding. The customer support from ionCube is world-class."]},{"author":"Prashant Telang - TransPacific Software","date":"Sep 2023","sound_bite":"Straightforward and well-documented. Thanks to ionCube, we\u0027ve successfully protected our unique code from unauthorized sharing.","full_text":["At TransPacific Software, we specialize in Diamond and Jewelry B2B trading and B2C services. We\u0027ve created a special tool, our Diamond management engine, which helps handle millions of diamonds for global B2B\/ B2C diamond trading companies.","This powerful engine is built using PHP and needs to be installed on servers of diamond traders worldwide. To keep our valuable work safe, we rely on ionCube Encoder. We\u0027ve used ionCube with popular platforms like \"Magento,\" Woocommerce, Zend Framework, Laravel and various other PHP tools in multiple projects.","Our method of encoding, using a license key for encryption, is straightforward and well-documented. Plus, we\u0027ve received excellent support along the way. Thanks to ionCube, we\u0027ve successfully protected our unique code from unauthorized sharing."]},{"author":"Chan - EzyGold.com","date":"Sep 2023","sound_bite":"Your software has accompanied, optimized, and helped secure our software, which has never failed so far, and is why we continue to use it.","full_text":["We have been using ionCube software for over 15 years and have purchased several licenses and upgrades. During this time your software has accompanied, optimized, and helped secure our software, which has never failed so far, and is why we continue to use it."]},{"author":"Michael Stauber, Solarspeed.net","date":"Oct 2023","sound_bite":"Included shell tools let us easily integrate ionCube encoder into release mechanisms, pulling unencoded sources from repositories and generating encrypted packages on the fly.","full_text":["At SOLARSPEED.NET and BlueOnyx.it we\u0027ve been using ionCube since 2006 and 2008 respectively to protect the source code of our commercial PHP applications. The ability to ship code without revealing intellectual property or means and methods has allowed us to streamline the distribution of our code. It also allowed us to create a license management that allows both ease of usage as well as convenience for our clients and us.","The included shell tools to encode scripts allowed us to easily integrate ionCube encoder into our release mechanisms where unencoded sources are pulled from the code repositories and encrypted installation packages are generated on the fly.","The ability to further lock down licensed software to specific hardware environments is another benefit which underlines the strength of ionCube encoded applications.","We\u0027re very happy with ionCube and we probably wouldn\u0027t be where we are today without it."]},{"author":"Dominik Bauer, Lead Developer, tenantos.com","date":"Oct 2023","sound_bite":["We are especially impressed with the dynamic keys feature, which provides an extra layer of robust code protection against crackers."],"full_text":["As a software development company, we use ionCube to protect our software against software piracy. After comparing various solutions, we have been using ionCube since 2017. Since then, ionCube has never caused a bug or altered the behavior of the code, which shows that ionCube is a very reliable choice.","The CLI tool is remarkably easy to use and integrates perfectly into our build tools. We are especially impressed with the dynamic keys feature, which provides an extra layer of robust code protection against crackers. Last but not least, we had to contact ionCube support two times, and each time they were extremely helpful."]},{"author":"Sibin Grasic - CTO, oblak.host","date":"Oct 2023","sound_bite":"From the developer standpoint, integrating ionCube into our workflows was straightforward and easy. If we had questions, ionCube support was there to assist us at every step.","full_text":["We use ionCube encoder to encode and protect all of our custom cPanel and WHMCS plugins. Protecting the codebase vastly increases our own security and security of our users, since malicious actors cannot exfiltrate the source code and data.","From the developer standpoint, integrating ionCube encoding in our workflows was easy and straightforward, and if we had questions ionCube support was there to assist us every step of the way."]},{"author":"Gabriel M., ASSP Deluxe for cPanel","date":"Oct 2023","sound_bite":"We highly recommend ionCube for any PHP project that needs effective source code protection. I\u0027ve been using ionCube for over ten years.","full_text":["ionCube offers an easy and reliable solution to protect PHP source code. Their encoder is quick to install and seamlessly integrates into your development workflow. We highly recommend ionCube for any PHP project that needs effective source code protection. I\u0027ve been using ionCube for over ten years to encode my project ASSP deluxe for cPanel, and I\u0027ve never had any issues."]},{"author":"Trung Huynh, Freelancer","date":"Oct 2023","sound_bite":"It\u2019s a critical asset for maintaining the integrity of my work.","full_text":["ionCube Encoder provides excellent protection for my code, with quick updates and easy installation. It\u2019s a critical asset for maintaining the integrity of my work."]},{"author":"Mark E, Product Developer","date":"Oct 2023","sound_bite":"ionCube is a crucial part of our workflow in protecting our software from being altered or pirated.","full_text":["ionCube is a crucial part of our workflow in protecting our software from being altered or pirated. It\u0027s easy for our clients to set up on their servers and helps our paid software stay competitive. We can\u0027t wait to see what they offer in the future!"]},{"author":"Michael L, futec-gmbh.de","date":"Oct 2023","sound_bite":"We use ionCube encoder to protect our intellectual code which we deploy on our customers server. In using ionCube we make sure that none of our source code gets leaked and destroys our Business.","full_text":["We use ionCube encoder to protect our intellectual code which we deploy on our customers server. In using ionCube we make sure that none of our source code gets leaked and destroys our Business. On top of that ionCube helps us to secure our php code against code injection from hacker attacks."]},{"author":"Rafa\u0142 Z, presta-mod.pl","date":"Oct 2023","sound_bite":"The ability to automatically generate licenses on the server using the applications provided by ionCube for servers is a fantastic and easy-to-implement solution.","full_text":["I use this software to secure the PHP code that I sell under licenses. ionCube solves all licensing issues, and the ability to automatically generate licenses on the server using the applications provided by ionCube for servers is a fantastic and easy-to-implement solution. I highly recommend it to anyone considering a purchase."]},{"author":"Remy Swaab, Business Development, NexorONE.com","date":"Oct 2023","sound_bite":"ionCube has been crucial in the delivery of our product, as code protection is of utmost importance.","full_text":["ionCube has been crucial in the delivery of our product, as code protection is of utmost importance. Any external deployment hinges on code integrity preservation, ionCube has been the solution that guards the code and allowed us to expand our services."]},{"author":"Nguyen Tien Minh, Founder, 1001gr.com","date":"Oct 2023","sound_bite":"I highly recommend ionCube to any developer looking for an effective and easy-to-use source code protection solution.","full_text":["ionCube has been a trusted source code protection solution for my business for over a year. ionCube has helped to safeguard our applications from unauthorized access and reverse engineering, giving us peace of mind knowing that our intellectual property is protected. I highly recommend ionCube to any developer looking for an effective and easy-to-use source code protection solution."]},{"author":"Attwell Wang, Founder, www.zentao.net","date":"Oct 2023","sound_bite":"ionCube helped us implement an authorization solution based on IP address, Mac address, and domain name.","full_text":["We mainly use ionCube in ZenTao project management software. ZenTao is an open-source project management software like Jira whose functions cover the overall core process of R&D project management. Its concept is mainly based on the internationally popular agile project management method - Scrum, which is suitable for rapid iterative development of software R&D projects\uff0cconverging project management models such as waterfall and Kanban. ZenTao can currently provide full life cycle project management solutions, DevOps integrated solutions, and automated testing solutions to achieve efficient project management.","Our main uses of ionCube:","1. Used for the encryption of the charging module of our ZenTao. ionCube helped us implement an authorization solution based on IP address, Mac address, and domain name.","2. Used for the encryption of third-party plug-ins in our app store. When third-party developers upload plug-ins, they can choose whether to encrypt them.","3. Used for encryption of our online systems to enhance system security.","4. Used for encryption for the k8s environment.","5. Provide some core data, such as keys, through encryption to cope with many scenarios with high-security requirements."]},{"author":"Benoit D - assimo.com","date":"Oct 2023","sound_bite":"This technology enables us to safeguard our PHP server, ensuring the protection of our educational content when distributed via USB drives.","full_text":["This technology enables us to safeguard our PHP server, ensuring the protection of our educational content when distributed via USB drives. ionCube serves as a vital tool in preserving the integrity and security of our platform, allowing us to extend the reach of education even in connectivity-challenged settings."]},{"author":"Ahmet H, inosas.com.tr","date":"Oct 2023","sound_bite":"We are using ionCube in off the shelf products to protect our source code and business logic for 10 years. I highly recommend ionCube...","full_text":["We are using ionCube in off the shelf products to protect our source code and business logic for 10 years. I highly recommend ionCube because it\u2019s easy to use in server implementation and grade support for all platforms."]},{"author":"Oleg R, Founder, Mersibo Technologies","date":"Oct 2023","sound_bite":"For projects where we employ a time-based billing model, ionCube\u0027s time-limited license provision proves invaluable in safeguarding our revenue streams.","full_text":["We utilize ionCube to address several critical challenges within our workflow. Foremost among these is the prevention of code tampering and safeguarding our proprietary algorithms while granting our clients the flexibility to modify specific code segments. Enhancing code performance is another pivotal objective for us, and ionCube significantly aids in achieving this. For projects where we employ a time-based billing model, ionCube\u0027s time-limited license provision proves invaluable in safeguarding our revenue streams. Furthermore, deploying encoded applications exudes heightened professionalism, maintaining our company\u0027s esteemed reputation."]},{"author":"Leandro Farias, Idalus Internet Solutions","date":"Oct 2023","sound_bite":"ionCube helped protect our intellectual property, improve the security of our applications.","full_text":["ionCube helped protect our intellectual property, improve the security of our applications and, not least, increase the execution performance of our applications."]},{"author":"Anton F, deinconsultant.de","date":"Oct 2023","sound_bite":"ionCube has become an integral part of our everyday development cycle. It\u0027s an indispensable tool for us.","full_text":["ionCube has become an integral part of our everyday development cycle. It\u0027s an indispensable tool for us as we create JTL plugins for the JTL shop. It ensures our code remains secure while maintaining excellent usability and reliability."]},{"author":"Lukasz Mazur from www.stat4seo.pl","date":"Feb 2024","sound_bite":"I\u0027ve been using ionCube technology since 2012 to encode and protect my code.","full_text":["I\u0027ve been using ionCube technology since 2012 to encode and protect my code. Software is fast, easy to use and efficient. Great product."]},{"author":"Vesna, Director WCL","date":"Jul 2024","sound_bite":"We have been using ionCube products to protect our code since 2017, and we never had any issues. It proved to be an invaluable tool, very straightforward to use!","full_text":["We have been using ionCube products to protect our code since 2017, and we never had any issues. It proved to be an invaluable tool, very straightforward to use!"]},{"author":"Gustavo, F","date":"Feb 2026","sound_bite":"The online encoder is a good option for those with low demand who still want to protect themselves like the big developers. I feel on the same level as the giants. Thank you.","full_text":["The online encoder is a good option for those with low demand who still want to protect themselves like the big developers. I feel on the same level as the giants. Thank you."]},{"author":"Jennifer and Frank, JnF Specialities","date":"Mar 2026","sound_bite":["We\u0027ve used ionCube Encoder Pro since PHP 4 back in 2004, and continuously update to keep up or fall behind.","ionCube Encoder Pro is the very best investment for security that can\u0027t be surpassed."],"full_text":["Jennifer and Frank through JnF Specialties and qualitycontrolplan.com have applied ionCube since 2004 with our best effort, which is still kicking at two locations:","Our Lite demo URL:","<a href=\"https:\/\/www.onlinequalitysystem.com\/eqmslite\/\" target=\"_blank\">https:\/\/www.onlinequalitysystem.com\/eqmslite\/<\/a>","Our very well used demo URL:","<a href=\"https:\/\/www.onlinequalitysystem.com\/efficientqms\/\" target=\"_blank\">https:\/\/www.onlinequalitysystem.com\/efficientqms\/<\/a>","We offer a free download of our Lite eQMS at:","<a href=\"https:\/\/www.quality-control-plan.com\/product\/paperless-quality-plan\/\" target=\"_blank\">https:\/\/www.quality-control-plan.com\/product\/paperless-quality-plan\/<\/a>","See below our Linkedin URL to learn more about how we used Efficient QMS(tm) with ionCube protection in a real-world application for projects like the NASA Einstein Mission named Gravity Probe B. My employer (EPT) used eQMS to support manufacture of complex products for NASA, ESA, KARI, and more just like GP-B.","<a href=\"https:\/\/www.linkedin.com\/in\/frankelias1\" target=\"_blank\">https:\/\/www.linkedin.com\/in\/frankelias1<\/a>"]},{"author":"Breno Costa \u2013 CEO, lugsoft.com.br","date":"Oct 2023","sound_bite":"Highly effective in preventing the illegal sale of our products. We have seen a significant reduction in unauthorized copying and distribution of our products.","full_text":["Since acquiring PHP Encoder - ionCube in 2019, we have implemented this software to encrypt our PHP products with license keys, which has been highly effective in preventing the illegal sale of our products. Since then, we have seen a significant reduction in unauthorized copying and distribution of our products, ensuring the security of our intellectual property and the integrity of our business. We remain committed to maintaining this security by ensuring that our products are only accessible to customers who comply with licensing guidelines."],"lang":{"code3":["PRT","BRA","AGO"],"sound_bite":"Altamente eficaz na preven\u00e7\u00e3o da venda ilegal de nossos produtos. Observamos uma redu\u00e7\u00e3o significativa na c\u00f3pia e distribui\u00e7\u00e3o n\u00e3o autorizada de nossos produtos","full_text":["Desde a aquisi\u00e7\u00e3o do PHP Encoder - ionCube em 2019, implementamos esse software para criptografar nossos produtos em PHP com chaves de licen\u00e7a, o que tem sido altamente eficaz na preven\u00e7\u00e3o da venda ilegal de nossos produtos. Desde ent\u00e3o, observamos uma redu\u00e7\u00e3o significativa na c\u00f3pia e distribui\u00e7\u00e3o n\u00e3o autorizada de nossos produtos, garantindo a seguran\u00e7a de nossa propriedade intelectual e a integridade de nosso neg\u00f3cio. Continuamos comprometidos em manter essa seguran\u00e7a, garantindo que nossos produtos sejam acess\u00edveis apenas aos clientes que cumpram as diretrizes de licenciamento."]},"show_orig_lang":false},{"author":"Hakan D, Senior Developer, Ofismo.com","date":"Oct 2023","sound_bite":"It also works smoothly on many hosting panels. Cpanel, Directadmin, Plesk.","full_text":["Our company produces website software with PHP. We have been encrypting our software with ionCube since 2015. It\u0027s great to have different encryption methods.","It also works smoothly on many hosting panels. Cpanel, Directadmin, Plesk."],"lang":{"code3":["TUR"],"sound_bite":"Ayr\u0131ca bir \u00e7ok hosting panelinde sorunsuz \u00e7al\u0131\u015fmaktad\u0131r. Cpanel, Directadmin, Plesk.","full_text":["Firmam\u0131z php ile web site yaz\u0131l\u0131mlar\u0131 \u00fcretmektedir. Yapt\u0131\u011f\u0131m\u0131z yaz\u0131l\u0131mlar\u0131 2015 y\u0131l\u0131ndan bu yana  ionCube ile \u015fifreliyoruz. Farkl\u0131 \u015fifreleme metodlar\u0131 olmas\u0131 \u00e7ok iyi.","Ayr\u0131ca bir \u00e7ok hosting panelinde sorunsuz \u00e7al\u0131\u015fmaktad\u0131r. Cpanel, Directadmin, Plesk."]},"show_orig_lang":false},{"author":"Yhonatan Q., desarrollador de M\u00f3dulos WHMCS","date":"Oct 2023","sound_bite":"The perfect tool to develop quality modules without risk for our company. Now our entire team is very satisfied.","full_text":["Our company provides hosting and software development and for years we were looking for a tool to protect our modules against piracy, then we found ionCube, the perfect tool to develop quality modules without risk for our company. Now our entire team is very satisfied."],"lang":{"code3":["ES","MEX","ARG","ECU","COL","CHL","URY","VEN","PER","BOL","PRY","CUB","GTM","CRI","HND","PRT","DOM","PAN","SLV","GNQ","NIC"],"sound_bite":"herramienta perfecta para desarrollar m\u00f3dulo de calidad y sin riesgo para nuestra empresa. Ahora todo nuestro equipo de trabajo est\u00e1 muy satisfecho.","full_text":["Nuestra empresa brinda hosting y desarrollo de software y desde a\u00f1os busc\u00e1bamos una herramienta para proteger nuestros m\u00f3dulos contra de la pirater\u00eda, entonces conocimos ionCube la herramienta perfecta para desarrollar m\u00f3dulo de calidad y sin riesgo para nuestra empresa. Ahora todo nuestro equipo de trabajo est\u00e1 muy satisfecho."]},"show_orig_lang":false}]'></home-testimonial-slide>
+            </div>
+
+            <div class="panel" id="olic">
+                <h2 class="panel_title">
+                    Online Licensing Suite
+                    <div class="new_badge">NEW</div>
+                </h2>
+                <div class="standard_subtitle" style="
+                    font-size: clamp(19px, 2.5vw, 27px);
+                    margin-bottom: 25px;
+                ">Manage Licensing with Ease</div>
+
+                <div class="flow_wrapper">
+                    <!-- STEP 1 -->
+                    <div class="step_card">
+                        <div class="step_icon">
+                            <img src="/images/icons/computer_setup.png" alt="Setup Project">
+                        </div>
+
+                        <div class="step_content">
+                            <div class="step_title">1. Setup Project</div>
+                            <div class="step_text hidden-xs">
+                                Define product,<br>
+                                versions & variants<br>
+                                (trial/paid)
+                            </div>
+                            <div class="step_text visible-xs">
+                                Define product,
+                                versions & variants
+                                (trial/paid)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrow"></div>
+
+                    <!-- STEP 2 -->
+                    <div class="step_card">
+                        <div class="step_icon">
+                            <img src="/images/icons/secure_file.png" alt="Create License File">
+                        </div>
+
+                        <div class="step_content">
+                            <div class="step_title">2. Create License File</div>
+                            <div class="step_text hidden-xs">
+                                Specify user details,<br>
+                                features & expiry.<br>
+                                
+                            </div>
+                            <div class="step_text visible-xs">
+                                Specify user details,
+                                features & expiry.
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrow"></div>
+
+                    <!-- STEP 3 -->
+                    <div class="step_card">
+                        <div class="step_icon">
+                            <img src="/images/icons/cloud_download.png" alt="Distribute & Manage">
+                        </div>
+
+                        <div class="step_content">
+                        
+                        <div class="step_title">3. Distribute</div>
+                            <div class="step_text hidden-xs">
+                                Download file and distribute.
+                            </div>
+                            <div class="step_text visible-xs">
+                                Download file and distribute.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="license_files_wrapper">
+                    <div class="standard_subtitle">Customise your licenses to fit your business needs</div>
+                    <div class="license_card_group">
+                        <!-- 1. Domain-locked paid -->
+                        <div class="license_card paid">
+                            <img class="license_icon" src="/images/icons/domain_icon.png" alt="Domain icon">
+                            <div class="license_title">Your Domain-Locked<br>Paid License</div>
+                            <div class="license_detail">example.com</div>
+                            <div class="license_meta">Expires in 30 days</div>
+                            <div class="license_pill paid">Paid license</div>
+                        </div>
+
+                        <!-- 2. Domain-locked trial -->
+                        <div class="license_card trial">
+                            <img class="license_icon" src="/images/icons/domain_icon.png" alt="Domain icon">
+                            <div class="license_title">Your Domain-Locked<br>Trial License</div>
+                            <div class="license_detail">staging.example.com</div>
+                            <div class="license_meta">Expires in 14 days</div>
+                            <div class="license_pill trial">Trial license</div>
+                        </div>
+
+                        <!-- 3. IP-locked trial -->
+                        <div class="license_card trial">
+                            <img class="license_icon" src="/images/icons/ip_icon.png" alt="IP icon">
+                            <div class="license_title">Your IP-Locked<br>Trial License</div>
+                            <div class="license_detail">203.0.113.45</div>
+                            <div class="license_meta">Expires never</div>
+                            <div class="license_pill trial">Trial license</div>
+                        </div>
+
+                        <!-- 4. General license with variants -->
+                        <div class="license_card enterprise">
+                            <img class="license_icon" src="/images/icons/server_icon.png" alt="Server icon">
+                            <div class="license_title">Your General License<br>with Variants</div>
+                            <div class="license_detail">Key: A4F7-9C32-BA81</div>
+                            <div class="license_meta">Plan: 50 users, 3 variants</div>
+                            <div class="license_pill enterprise">Enterprise license</div>
+                        </div>
+                    </div>
+                    <div class="standard_body">Different licensing options give you full control over how your PHP application is protected and distributed</div>
+                </div>
+                
+                <div v-if=0>
+                    <div class="left video_prompt standard_body">
+                        <div class="play-button">
+                            <img src="/images/play_button.png" alt="Play Online Licensing Video" data-toggle="modal" data-target="#olic_video_modal" style="cursor: pointer;">
+                        </div>
+                        <p class="trial-prompt">
+                            Watch below and learn more about Online Licensing<br>
+                            or click Learn More to access an online demo.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info mt_30 mb_0" style="width: fit-content;align-self: center;"><b>Offer:</b> 2 months free included with new Pro/Cerberus purchases</div>
+
+                <div class="button_group">
+                    
+                    
+                    <a class="btn btn-lg btn-resp" style="background-color: #e71c2c; color: white" onclick="return;" alt="Play Online Licensing Video" data-toggle="modal" data-target="#olic_video_modal">
+                        <i class="fa fa-play" aria-hidden="true"></i> 
+                        Watch Video
+                    </a>
+                    
+                    <a href="/online_licensing.php" class="btn btn-special btn-lg btn-resp">Learn More</a>
+                    <a href="/encoder_eval_download.php" class="btn btn-info btn-lg btn-resp">Get Free Trial</a>
+                </div>
+            </div>
+
+            <div class="panel" id="olenc">
+                <h2 class="panel_title">ionCube Online Encoder</h2>
+                <div class="content">
+                    <div class="standard_subtitle">Protect PHP Code with Our Low-Cost Solution for Smaller Projects</div>
+                    <div id="online_enc_strip">
+                        <div class="action">
+                            <img class="" src="/images/icons/file_upload.png" alt="Upload file">
+                            Upload
+                        </div>
+                        <div class="action">
+                            Set PHP Version
+                        </div>
+                        <div class="action">
+                            Encode
+                            <img class="" src="/images/icons/checkmark_circle.png" alt="Complete">
+                        </div>
+                    </div>
+                    <div class="standard_body">
+                        Our simplified encoding solution is perfect for smaller projects, providing quick protection and preventing unauthorized access.
+                    </div>
+                    <a href="/online_encoder.php" class="btn btn-special btn-lg btn-resp">Go to Online Encoder</a>
+                </div>
+            </div>
+            
+            <div class="panel" id="loader">
+                <h2 class="panel_title">ionCube Loader</h2>
+                <div class="content standard_body">
+                    <div class="standard_subtitle">Need to run a plugin or app?</div>
+                    <div>ionCube Loader is required to run encoded PHP files and is available on many popular web hosts by default. With support for over 10 platforms as standard, it's easy for end users to set up.</div>
+                    <div class="feature_list standard_body">
+                        <span class="bullet_point">&#x2022;</span>Upload the Loader Wizard script for assisted installation<br>
+                        <span class="bullet_point">&#x2022;</span>Run it in your browser to detect your setup<br>
+                        <span class="bullet_point">&#x2022;</span>Follow the steps to install and configure<br>
+                    </div>
+                    <a href="/loaders.php" class="btn btn-special btn-lg btn-resp">Get the Loader</a>
+                </div>
+            </div>
+            
+            
+
+            <div class="panel" id="ic24">
+                <h2 class="panel_title">ionCube 24</h2>
+                <div class="content">
+                    <div class="standard_subtitle">Website Security and Error Capture</div>
+                    <div class="standard_body">Essential website utilities all in one suite.</div>
+                    <div class="feature_list standard_body">
+                        <span class="bullet_point">&#x2022;</span>Protect against malware and website defacement.<br>
+                        <span class="bullet_point">&#x2022;</span>Real-Time detection and management.<br>
+                        <span class="bullet_point">&#x2022;</span>Unexpected new or modified files instantly blocked.<br>
+                        <span class="bullet_point">&#x2022;</span>Real-time PHP and JS error reporting.<br>
+                    </div>
+                    <a id="ic24logo" target="_blank" href="https://ioncube24.com" class="inner_img hide">
+                        <img class="img-responsive" src="/images/ioncube24/text_logo_vert.png" alt="ionCube24 logo">
+                    </a>
+                    <a id="ic24FOM" href="https://ioncube24.com" target="ic24" class="btn btn-special btn-lg btn-resp">Find Out More</a>
+                </div>
+                <a id="ic24logo" target="_blank" href="https://ioncube24.com" class="outer_img">
+                    <img class="img-responsive" src="/images/ioncube24/text_logo_vert.png" alt="ionCube24 logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="olic_video_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document" style="width: 90%; max-width: 1200px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Online Licensing</h4>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe id="onlineLicensingVideo" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+
+window.onload = function() {
+
+    const marquee = document.querySelector('.home_page #marquee');
+    const marquee_sub = document.querySelector('.home_page #marquee_sub');
+    
+    function hueRotateEffect() {
+        let hue = 0;
+
+        setInterval(() => {
+            hue = (hue + 10); 
+            console.log(hue);
+            marquee.style.filter = 'hue-rotate(' + hue + 'deg)';
+        }, 5000);
+        
+        
+    }
+
+    setTimeout(() => {
+        // hueRotateEffect();
+    }, 0); 
+
+
+
+
+
+    var angle1 = 315;
+    var angle2 = 75;
+    
+    var pos1 = 238.5 + Math.sin(angle1 * Math.PI / 180) * 1;
+    var pos2 = 218 + Math.cos(angle2 * Math.PI / 180) * 1;
+    var dir1 = 1;
+    var dir2 = 1;
+
+    function updateBackground() {
+        
+        if (angle1 >= 335) dir1 = -1;
+        if (angle1 <= 295) dir1 = 1;
+        if (angle2 >= 85) dir2 = -1;
+        if (angle2 <= 65) dir2 = 1;
+
+        angle1 = angle1 + (0.02 * dir1);
+        angle2 = angle2 + (0.015 * dir2);
+        pos1 = 238.5 + Math.sin(angle1 * Math.PI / 180) * 1;
+        pos2 = 218 + Math.cos(angle2 * Math.PI / 180) * 1;
+
+        var background = 'repeating-linear-gradient(' + angle1 + 'deg, #68a9a912 85%, #073AFF00 100%), repeating-radial-gradient(' + angle2 + '% ' + angle2 + '% at ' + pos1 + '% ' + pos2 + '%, #00ffff0a 20%, #073AFF14 39%), radial-gradient(99% 99% at 109% 2%, #2950b5 0, #073AFF00 100%), radial-gradient(99% 99% at 21% 78%, #9756565c 0, #073AFF00 100%),';
+
+        if (window.innerWidth <= 991) {
+            background += ' radial-gradient(160% 234% at 91px -233px, #ff0000b5 0, #1433a9 76%)';
+        } else {
+            background += ' radial-gradient(160% 154% at 711px -303px, #ff0000b5 0, #1433a9 100%)';
+        }
+
+        var background2 = 'repeating-linear-gradient(' + angle1 + 'deg, #68a9a912 85%, #073AFF00 100%), repeating-radial-gradient(' + angle2 + '% ' + angle2 + '% at ' + pos1 + '% ' + pos2 + '%, #00ffff0a 20%, #073AFF14 39%), radial-gradient(99% 99% at 109% 2%, #2950b5 0, #073AFF00 100%), radial-gradient(99% 99% at 21% 78%, #9756565c 0, #073AFF00 100%), radial-gradient(160% 234% at 91px -193px,#ff0000b5 0,#1433a9 80%)';
+        
+        marquee.style.background = background;
+        marquee_sub.style.background = background2;
+    }
+
+    
+    setTimeout(() => {
+        setInterval(updateBackground, 100);
+    }, 500);
+}
+</script>
+</div>
+
+
+
+
+
+
+
+<div data-stable-root>
+	<footer class="footer text-center no-user">
+		
+		<p>
+			<a href="/company.php">About ionCube</a>
+			&nbsp;|&nbsp;
+
+							<a href="/news.php">News</a>
+				&nbsp;|&nbsp;
+				<a href="/jobs">Jobs</a>
+				&nbsp;|&nbsp;
+				<a href="/affiliates.php">Partners</a>
+				&nbsp;|&nbsp;
+						
+							<a href="/consultancy.php">Consultancy</a>
+				&nbsp;|&nbsp;
+						
+			<a href="/tnc.php">Terms and Conditions</a>
+			&nbsp;|&nbsp;
+			<a href="/pp.php">Privacy &amp; Cookies Policy</a>
+			&nbsp;|&nbsp;
+			<a href="/thanks.php">Acknowledgements</a>
+
+			
+		</p>
+		<p>
+			Copyright 2002-2026 ionCube Ltd. VAT GB-814942816.&nbsp;&nbsp;All rights reserved. ionCube and the ionCube logo are registered trademarks of ionCube Ltd.
+			<br>
+			Prices exclude VAT. VAT is applied if purchasing from the UK or from the European Union by a non-business customer. The shopping cart will show any VAT due based on your country before the purchase is finalized.
+		</p>
+	</footer>
+</div>
+	<a href="/bot_trap.php" class="invisible">click</a>  
+
+
+
+
+
+
+<script type="text/javascript">
+var google_tag_params = { }
+</script>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1072433099;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+var google_conversion_format = 3;
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1072433099/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('l6oov', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6oov&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6oov&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+
+
+<script type="text/javascript">
+function addScript(p) {
+  var element = document.createElement("script");
+  element.src = p;
+  document.body.appendChild(element);
+}
+
+function fetchJS() {
+// addScript("/js/lazy.js");
+//addScript("/js/plugins/qtip2/jquery.qtip.min.js");
+//addScript("/js/plugins/prettyPhoto/js/jquery.prettyPhoto.js");
+//addScript("/js/colorbox/1.5.5/jquery.colorbox-min.js");
+}
+
+if (window.addEventListener)
+  window.addEventListener("load", fetchJS, false);
+else if (window.attachEvent)
+  window.attachEvent("onload", fetchJS);
+else 
+  window.onload = fetchJS;
+</script>
+</body></html>
+

@@ -1,0 +1,88 @@
+{
+  "baseUrl": "http://127.0.0.1:8087",
+  "generatedAt": "2026-06-18T03:30:23.812Z",
+  "browser": "chromium",
+  "pages": [
+    {
+      "url": "/",
+      "finalUrl": "http://127.0.0.1:8087/",
+      "status": 200,
+      "title": "Home | Trading Wallet Local",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "01-home-desktop.png",
+      "bodyPreview": "Select Language\nAbkhaz\nAcehnese\nAcholi\nAfar\nAfrikaans\nAlbanian\nAlur\nAmharic\nArabic\nArmenian\nAssamese\nAvar\nAwadhi\nAymara\nAzerbaijani\nBalinese\nBaluchi\nBambara\nBaoulé\nBashkir\nBasque\nBatak Karo\nBatak Simalungun\nBatak Toba\nBelarusian\nBemba\nBengali\nBetawi\nBhojpuri\nBikol\nBosnian\nBreton\nBulgarian\nBuryat\nCantonese\nCatalan\nCebuano\nChamorro\nChechen\nChichewa\nChinese (Simplified)\nChinese (Traditional)\nChuukese\nChuvash\nCorsican\nCrimean Tatar (Cyrillic)\nCrimean Tatar (Latin)\nCroatian\nCzech\nDanish\nDari\nDhivehi\n",
+      "consoleMessages": [],
+      "pageErrors": [],
+      "requestFailures": []
+    },
+    {
+      "url": "/login",
+      "finalUrl": "http://127.0.0.1:8087/login",
+      "status": 200,
+      "title": "Login | Trading Wallet Local",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "02-login-desktop.png",
+      "bodyPreview": "EN\nDE\nen\nLogin\nmail\nlock\nlogin\nForgot password?\nregister",
+      "consoleMessages": [],
+      "pageErrors": [],
+      "requestFailures": []
+    },
+    {
+      "url": "/register",
+      "finalUrl": "http://127.0.0.1:8087/register",
+      "status": 200,
+      "title": "Create Account | Trading Wallet Local",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "03-register-desktop.png",
+      "bodyPreview": "EN\nDE\nen\nRegister\nperson\nperson\nalternate_email\ncall\nflag\nSelect Country\nAfghanistan\nAlbania\nAlgeria\nAndorra\nAngola\nAntigua & Deps\nArgentina\nArmenia\nAustralia\nAustria\nAzerbaijan\nBahamas\nBahrain\nBangladesh\nBarbados\nBelarus\nBelgium\nBelize\nBenin\nBhutan\nBolivia\nBosnia Herzegovina\nBotswana\nBrazil\nBrunei\nBulgaria\nBurkina\nBurundi\nCambodia\nCameroon\nCanada\nCape Verde\nCentral African Rep\nChad\nChile\nChina\nColombia\nComoros\nCongo\nCongo {Democratic Rep}\nCosta Rica\nCroatia\nCuba\nCyprus\nCzech Republic\nDenmark\nDj",
+      "consoleMessages": [],
+      "pageErrors": [],
+      "requestFailures": []
+    },
+    {
+      "url": "/admin/login",
+      "finalUrl": "http://127.0.0.1:8087/admin/login",
+      "status": 200,
+      "title": "Admin Login | Trading Wallet Local",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "04-admin-login-desktop.png",
+      "bodyPreview": "Admin Login\nmail\nlock\nlogin\nForgot password?",
+      "consoleMessages": [],
+      "pageErrors": [],
+      "requestFailures": []
+    },
+    {
+      "url": "/",
+      "finalUrl": "http://127.0.0.1:8087/",
+      "status": 200,
+      "title": "Home | Trading Wallet Local",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "05-home-mobile.png",
+      "bodyPreview": " \nSelect Language\nAbkhaz\nAcehnese\nAcholi\nAfar\nAfrikaans\nAlbanian\nAlur\nAmharic\nArabic\nArmenian\nAssamese\nAvar\nAwadhi\nAymara\nAzerbaijani\nBalinese\nBaluchi\nBambara\nBaoulé\nBashkir\nBasque\nBatak Karo\nBatak Simalungun\nBatak Toba\nBelarusian\nBemba\nBengali\nBetawi\nBhojpuri\nBikol\nBosnian\nBreton\nBulgarian\nBuryat\nCantonese\nCatalan\nCebuano\nChamorro\nChechen\nChichewa\nChinese (Simplified)\nChinese (Traditional)\nChuukese\nChuvash\nCorsican\nCrimean Tatar (Cyrillic)\nCrimean Tatar (Latin)\nCroatian\nCzech\nDanish\nDari\nDhiveh",
+      "consoleMessages": [],
+      "pageErrors": [],
+      "requestFailures": []
+    }
+  ],
+  "interaction": {
+    "name": "Home hero Open Login link opens login page",
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:8087/login",
+    "title": "Login | Trading Wallet Local"
+  }
+}

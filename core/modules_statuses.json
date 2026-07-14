@@ -1,0 +1,7 @@
+{
+    "ManualDeposit": true,
+    "SupportTicket": true,
+    "KYC": true,
+    "P2pTransfer": false,
+    "CryptoTrading": false
+}
