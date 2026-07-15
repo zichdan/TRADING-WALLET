@@ -1,0 +1,516 @@
+=== DEPOSIT NEW PAGE ===
+URL: http://127.0.0.1:8000/user/deposits/new
+
+FORMS: [
+  {
+    "action": "http://127.0.0.1:8000/user/deposits/pay",
+    "method": "post",
+    "id": "",
+    "class": ""
+  },
+  {
+    "action": "http://translate.googleapis.com/translate_voting?client=te",
+    "method": "post",
+    "id": "goog-gt-votingForm",
+    "class": "VIpgJd-yAWNEb-hvhgNd-aXYTce"
+  }
+]
+
+INPUTS: [
+  {
+    "name": "_token",
+    "type": "hidden",
+    "value": "VzPRhgTVLEsT3z0iokESEHU2XAVBrzMHlpBmnW7t",
+    "id": "",
+    "class": ""
+  },
+  {
+    "name": "method_id",
+    "type": "radio",
+    "value": "1",
+    "id": "1",
+    "class": "funny-radio"
+  },
+  {
+    "name": "method_id",
+    "type": "radio",
+    "value": "1",
+    "id": "1",
+    "class": "funny-radio"
+  },
+  {
+    "name": "method_id",
+    "type": "radio",
+    "value": "1",
+    "id": "1",
+    "class": "funny-radio"
+  },
+  {
+    "name": "method_id",
+    "type": "radio",
+    "value": "1",
+    "id": "1",
+    "class": "funny-radio"
+  },
+  {
+    "name": "method_id",
+    "type": "radio",
+    "value": "1",
+    "id": "1",
+    "class": "funny-radio"
+  },
+  {
+    "name": "amount",
+    "type": "number",
+    "value": "",
+    "id": "",
+    "class": "cred-hyip-theme1-text-input"
+  },
+  {
+    "name": "sl",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputSrcLang",
+    "class": ""
+  },
+  {
+    "name": "tl",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputTrgLang",
+    "class": ""
+  },
+  {
+    "name": "query",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputSrcText",
+    "class": ""
+  },
+  {
+    "name": "gtrans",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputTrgText",
+    "class": ""
+  },
+  {
+    "name": "vote",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputVote",
+    "class": ""
+  }
+]
+
+SELECTS: [
+  {
+    "name": "",
+    "id": "",
+    "class": "goog-te-combo"
+  }
+]
+
+BUTTONS: [
+  {
+    "type": "submit",
+    "text": "Quick Links",
+    "class": "dropdown-with-caret relative sm:w-full z-10 flex i"
+  },
+  {
+    "type": "button",
+    "text": "‹",
+    "class": "owl-prev"
+  },
+  {
+    "type": "button",
+    "text": "›",
+    "class": "owl-next"
+  },
+  {
+    "type": "submit",
+    "text": "Next",
+    "class": "w-2/3 text-xs md:text-sm text-[#d1d5db] text-cente"
+  },
+  {
+    "type": "button",
+    "text": "",
+    "class": "VIpgJd-yAWNEb-hvhgNd-bgm6sf"
+  },
+  {
+    "type": "button",
+    "text": "",
+    "class": "VIpgJd-yAWNEb-hvhgNd-bgm6sf"
+  }
+]
+
+LINKS: [
+  {
+    "href": "https://translate.google.com/",
+    "text": "Translate"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/account",
+    "text": "Profile Overview"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/account/edit",
+    "text": "Account Setting"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/logout",
+    "text": "Logout"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/dashboard",
+    "text": "Dashboard"
+  },
+  {
+    "href": "http://127.0.0.1:8000/",
+    "text": "Home"
+  },
+  {
+    "href": "http://127.0.0.1:8000/about-us",
+    "text": "About Us"
+  },
+  {
+    "href": "http://127.0.0.1:8000/contact-us",
+    "text": "Contact Us"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits/new#",
+    "text": "FAQ"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits/new#",
+    "text": "Privacy Policy"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits/new#",
+    "text": "Terms & Conditions"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/dashboard",
+    "text": "Dashboard"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits/new#",
+    "text": "Deposits"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits/new",
+    "text": "New"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits",
+    "text": "History"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/deposits/new#",
+    "text": "Investments"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/investments/new",
+    "text": "New"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/investments",
+    "text": "History"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/transactions",
+    "text": "Transactions"
+  },
+  {
+    "href": "https://trading-wallet.net/user/deposits/new",
+    "text": "Wallet Address"
+  }
+]
+
+BODY TEXT:
+Select Language
+Abkhaz
+Acehnese
+Acholi
+Afar
+Afrikaans
+Albanian
+Alur
+Amharic
+Arabic
+Armenian
+Assamese
+Avar
+Awadhi
+Aymara
+Azerbaijani
+Balinese
+Baluchi
+Bambara
+Baoulé
+Bashkir
+Basque
+Batak Karo
+Batak Simalungun
+Batak Toba
+Belarusian
+Bemba
+Bengali
+Betawi
+Bhojpuri
+Bikol
+Bosnian
+Breton
+Bulgarian
+Buryat
+Cantonese
+Catalan
+Cebuano
+Chamorro
+Chechen
+Chichewa
+Chinese (Simplified)
+Chinese (Traditional)
+Chuukese
+Chuvash
+Corsican
+Crimean Tatar (Cyrillic)
+Crimean Tatar (Latin)
+Croatian
+Czech
+Danish
+Dari
+Dhivehi
+Dinka
+Dogri
+Dombe
+Dutch
+Dyula
+Dzongkha
+Esperanto
+Estonian
+Ewe
+Faroese
+Fijian
+Filipino
+Finnish
+Fon
+French
+French (Canada)
+Frisian
+Friulian
+Fulani
+Ga
+Galician
+Georgian
+German
+Greek
+Guarani
+Gujarati
+Haitian Creole
+Hakha Chin
+Hausa
+Hawaiian
+Hebrew
+Hiligaynon
+Hindi
+Hmong
+Hungarian
+Hunsrik
+Iban
+Icelandic
+Igbo
+Ilocano
+Indonesian
+Inuktut (Latin)
+Inuktut (Syllabics)
+Irish Gaelic
+Italian
+Jamaican Patois
+Japanese
+Javanese
+Jingpo
+Kalaallisut
+Kannada
+Kanuri
+Kapampangan
+Kazakh
+Khasi
+Khmer
+Kiga
+Kikongo
+Kinyarwanda
+Kituba
+Kokborok
+Komi
+Konkani
+Korean
+Krio
+Kurdish (Kurmanji)
+Kurdish (Sorani)
+Kyrgyz
+Lao
+Latgalian
+Latin
+Latvian
+Ligurian
+Limburgish
+Lingala
+Lithuanian
+Lombard
+Luganda
+Luo
+Luxembourgish
+Macedonian
+Madurese
+Maithili
+Makassar
+Malagasy
+Malay
+Malay (Jawi)
+Malayalam
+Maltese
+Mam
+Manx
+Maori
+Marathi
+Marshallese
+Marwadi
+Mauritian Creole
+Meadow Mari
+Meiteilon (Manipuri)
+Minang
+Mizo
+Mongolian
+Myanmar (Burmese)
+N'Ko
+Nahuatl (Eastern Huasteca)
+Ndau
+Ndebele (South)
+Nepal Bhasa (Newari)
+Nepali
+Norwegian
+Nuer
+Occitan
+Odia (Oriya)
+Oromo
+Ossetian
+Pangasinan
+Papiamento
+Pashto
+Persian
+Polish
+Portuguese (Brazil)
+Portuguese (Portugal)
+Punjabi (Gurmukhi)
+Punjabi (Shahmukhi)
+Quechua
+Qʼeqchiʼ
+Romani
+Romanian
+Rundi
+Russian
+Sami (North)
+Samoan
+Sango
+Sanskrit
+Santali (Latin)
+Santali (Ol Chiki)
+Scots Gaelic
+Sepedi
+Serbian
+Sesotho
+Seychellois Creole
+Shan
+Shona
+Sicilian
+Silesian
+Sindhi
+Sinhala
+Slovak
+Slovenian
+Somali
+Spanish
+Sundanese
+Susu
+Swahili
+Swati
+Swedish
+Tahitian
+Tajik
+Tamazight
+Tamazight (Tifinagh)
+Tamil
+Tatar
+Telugu
+Tetum
+Thai
+Tibetan
+Tigrinya
+Tiv
+Tok Pisin
+Tongan
+Tshiluba
+Tsonga
+Tswana
+Tulu
+Tumbuka
+Turkish
+Turkmen
+Tuvan
+Twi
+Udmurt
+Ukrainian
+Urdu
+Uyghur
+Uzbek
+Venda
+Venetian
+Vietnamese
+Waray
+Welsh
+Wolof
+Xhosa
+Yakut
+Yiddish
+Yoruba
+Yucatec Maya
+Zapotec
+Zulu
+Powered by
+Dashboard
+Quick Links
+Dashboard
+Deposits
+New
+History
+Investments
+Transactions
+Wallet Address
+Quality Control
+Make New Deposit
+back
+swipe right to see all available payment methods
+Bank Transfer USD
+Min: USD100.00
+Max: USD1,000,000.00
+Charge: USD0.00
+Bank Transfer USD
+Min: USD100.00
+Max: USD1,000,000.00
+Charge: USD0.00
+Bank Transfer USD
+Min: USD100.00
+Max: USD1,000,000.00
+Charge: USD0.00
+Bank Transfer USD
+Min: USD100.00
+Max: USD1,000,000.00
+Charge: USD0.00
+Bank Transfer USD
+Min: USD100.00
+Max: USD1,000,000.00
+Charge: USD0.00
+Next
+©2026 Trading Wallet | All Rights Reserved
+//all scripts added here would be loaded globally //always start with an opening and closing tag

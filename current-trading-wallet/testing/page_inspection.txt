@@ -1,0 +1,137 @@
+=== USER LOGIN PAGE ===
+URL: http://127.0.0.1:8000/login
+Title: Login | Trading Wallet
+INPUTS: [
+  {
+    "name": "_token",
+    "type": "hidden",
+    "id": "",
+    "placeholder": ""
+  },
+  {
+    "name": "email",
+    "type": "email",
+    "id": "",
+    "placeholder": "email"
+  },
+  {
+    "name": "password",
+    "type": "password",
+    "id": "",
+    "placeholder": "password"
+  },
+  {
+    "name": "",
+    "type": "submit",
+    "id": "",
+    "placeholder": ""
+  }
+]
+BUTTONS: []
+FORMS: [
+  {
+    "action": "http://127.0.0.1:8000/login",
+    "method": "post",
+    "id": ""
+  }
+]
+
+=== ADMIN LOGIN PAGE ===
+URL: http://127.0.0.1:8000/admin/login
+Title: Admin Login | Trading Wallet
+INPUTS: [
+  {
+    "name": "_token",
+    "type": "hidden",
+    "id": "",
+    "placeholder": ""
+  },
+  {
+    "name": "email",
+    "type": "email",
+    "id": "",
+    "placeholder": "Email"
+  },
+  {
+    "name": "password",
+    "type": "password",
+    "id": "",
+    "placeholder": "Password"
+  },
+  {
+    "name": "",
+    "type": "submit",
+    "id": "",
+    "placeholder": ""
+  }
+]
+BUTTONS: []
+FORMS: [
+  {
+    "action": "http://127.0.0.1:8000/admin/login",
+    "method": "post",
+    "id": ""
+  }
+]
+
+=== REGISTER PAGE ===
+URL: http://127.0.0.1:8000/register
+INPUTS: [
+  {
+    "name": "_token",
+    "type": "hidden",
+    "id": "",
+    "placeholder": ""
+  },
+  {
+    "name": "first_name",
+    "type": "text",
+    "id": "",
+    "placeholder": "First Name"
+  },
+  {
+    "name": "last_name",
+    "type": "text",
+    "id": "",
+    "placeholder": "Last Name"
+  },
+  {
+    "name": "email",
+    "type": "email",
+    "id": "",
+    "placeholder": "Email Address"
+  },
+  {
+    "name": "phone_no",
+    "type": "tel",
+    "id": "",
+    "placeholder": "Phone No"
+  },
+  {
+    "name": "referred_by",
+    "type": "text",
+    "id": "",
+    "placeholder": "Referred By:"
+  },
+  {
+    "name": "password",
+    "type": "password",
+    "id": "",
+    "placeholder": "Password"
+  },
+  {
+    "name": "password_confirmation",
+    "type": "password",
+    "id": "",
+    "placeholder": "Confirm Password"
+  },
+  {
+    "name": "",
+    "type": "submit",
+    "id": "",
+    "placeholder": ""
+  }
+]
+
+=== DEPOSIT NEW (unauthenticated) ===
+URL: http://127.0.0.1:8000/login

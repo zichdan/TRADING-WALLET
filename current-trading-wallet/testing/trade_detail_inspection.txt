@@ -1,0 +1,946 @@
+=== ADMIN DEPOSIT DETAIL PAGE ===
+URL: http://127.0.0.1:8000/admin/deposits/view/1
+
+FORMS: [
+  {
+    "action": "http://127.0.0.1:8000/admin/deposits/delete",
+    "method": "post",
+    "id": "ref: <Node>"
+  },
+  {
+    "action": "http://translate.googleapis.com/translate_voting?client=te",
+    "method": "post",
+    "id": "goog-gt-votingForm"
+  }
+]
+
+INPUTS: [
+  {
+    "name": "",
+    "type": "text",
+    "value": "Last Cron Job: ",
+    "id": ""
+  },
+  {
+    "name": "_token",
+    "type": "hidden",
+    "value": "0qSE9QLsshcjaV25iPunN8HONkJutogqEANNc0K9",
+    "id": ""
+  },
+  {
+    "name": "id",
+    "type": "hidden",
+    "value": "",
+    "id": "id"
+  },
+  {
+    "name": "sl",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputSrcLang"
+  },
+  {
+    "name": "tl",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputTrgLang"
+  },
+  {
+    "name": "query",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputSrcText"
+  },
+  {
+    "name": "gtrans",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputTrgText"
+  },
+  {
+    "name": "vote",
+    "type": "text",
+    "value": "",
+    "id": "goog-gt-votingInputVote"
+  }
+]
+
+BUTTONS: [
+  {
+    "type": "submit",
+    "text": "Quick Links",
+    "class": "dropdown-with-caret relative sm:w-full z-10 flex items-cente"
+  },
+  {
+    "type": "button",
+    "text": "",
+    "class": "VIpgJd-yAWNEb-hvhgNd-bgm6sf"
+  },
+  {
+    "type": "button",
+    "text": "",
+    "class": "VIpgJd-yAWNEb-hvhgNd-bgm6sf"
+  }
+]
+
+LINKS: [
+  {
+    "href": "http://127.0.0.1:8000/admin/deposits/view/1#",
+    "text": "Super Admin"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/account",
+    "text": "Account Setitng"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/logout",
+    "text": "Logout"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/dashbaord",
+    "text": "Dashboard"
+  },
+  {
+    "href": "http://127.0.0.1:8000/",
+    "text": "Home"
+  },
+  {
+    "href": "http://127.0.0.1:8000/about-us",
+    "text": "About Us"
+  },
+  {
+    "href": "http://127.0.0.1:8000/contact-us",
+    "text": "Contact Us"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/deposits/view/1#",
+    "text": "FAQ"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/deposits/view/1#",
+    "text": "Privacy Policy"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/deposits/view/1#",
+    "text": "Terms & Conditions"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/dashbaord",
+    "text": "Dashboard"
+  },
+  {
+    "href": "",
+    "text": "Users"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/users",
+    "text": "All Users"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/users?users_query=status&users_by=active",
+    "text": "Active\n                            Users"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/users?users_query=status&users_by=suspended",
+    "text": "Suspended\n                            Users"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/users/email",
+    "text": "Email Users"
+  },
+  {
+    "href": "",
+    "text": "Deposits"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/deposits",
+    "text": "All"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/deposit-method",
+    "text": "Manual Methods"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/deposit-method/new",
+    "text": "Add New Method"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/gateways",
+    "text": "Automatic Gateways"
+  },
+  {
+    "href": "",
+    "text": "Withdrawals"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/withdrawals",
+    "text": "All Withdrawals"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/withdrawals/pending",
+    "text": "Pending Withdrawals"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/wallets",
+    "text": "User Wallets"
+  },
+  {
+    "href": "",
+    "text": "Investments"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/investments",
+    "text": "All Investments"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/investment-plans",
+    "text": "Plans"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/investment-plans/new",
+    "text": "Add New Plan"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/transactions",
+    "text": "Transactions"
+  },
+  {
+    "href": "",
+    "text": "FAQs"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/faqs",
+    "text": "Questions"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/faqs/new",
+    "text": "Add New"
+  },
+  {
+    "href": "",
+    "text": "Support Tickets"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/tickets",
+    "text": "All Tickets"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/tickets/new",
+    "text": "Create Ticket"
+  },
+  {
+    "href": "",
+    "text": "Reviews"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/testimonials",
+    "text": "Testimonials"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/testimonials/new",
+    "text": "Add New"
+  },
+  {
+    "href": "",
+    "text": "Team Members"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/teams",
+    "text": "Members"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/teams/new",
+    "text": "Add New"
+  },
+  {
+    "href": "",
+    "text": "Blogs"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/blogs",
+    "text": "Published Posts"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/blogs/new",
+    "text": "Add New Post"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/system-manager",
+    "text": "System"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/core",
+    "text": "Core"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/logo-seo",
+    "text": "Logo & SEO"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/sections",
+    "text": "Sections"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/security-otp",
+    "text": "Security & OTP"
+  },
+  {
+    "href": "",
+    "text": "Email Setting"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/email-config",
+    "text": "Email Config"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/email-templates",
+    "text": "Email Templates"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/livechat",
+    "text": "Livechat"
+  },
+  {
+    "href": "",
+    "text": "Theme Manager"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/theme-manager",
+    "text": "Active Themes"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/theme-manager/exports",
+    "text": "Upload & Archives"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/theme-manager/new-theme",
+    "text": "Create New Theme"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/misc",
+    "text": "Miscellaneous"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/custom-css",
+    "text": "Custom CSS"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/custom-js",
+    "text": "Custom JS"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/settings/custom-php",
+    "text": "Custom PHP"
+  },
+  {
+    "href": "http://127.0.0.1:8000/files/admin/user.png",
+    "text": "back"
+  },
+  {
+    "href": "http://127.0.0.1:8000/admin/users/view/6",
+    "text": "Test Trader"
+  },
+  {
+    "href": "",
+    "text": "Process"
+  },
+  {
+    "href": "",
+    "text": "Delete"
+  }
+]
+
+BODY TEXT:
+Select Language
+Abkhaz
+Acehnese
+Acholi
+Afar
+Afrikaans
+Albanian
+Alur
+Amharic
+Arabic
+Armenian
+Assamese
+Avar
+Awadhi
+Aymara
+Azerbaijani
+Balinese
+Baluchi
+Bambara
+Baoulé
+Bashkir
+Basque
+Batak Karo
+Batak Simalungun
+Batak Toba
+Belarusian
+Bemba
+Bengali
+Betawi
+Bhojpuri
+Bikol
+Bosnian
+Breton
+Bulgarian
+Buryat
+Cantonese
+Catalan
+Cebuano
+Chamorro
+Chechen
+Chichewa
+Chinese (Simplified)
+Chinese (Traditional)
+Chuukese
+Chuvash
+Corsican
+Crimean Tatar (Cyrillic)
+Crimean Tatar (Latin)
+Croatian
+Czech
+Danish
+Dari
+Dhivehi
+Dinka
+Dogri
+Dombe
+Dutch
+Dyula
+Dzongkha
+Esperanto
+Estonian
+Ewe
+Faroese
+Fijian
+Filipino
+Finnish
+Fon
+French
+French (Canada)
+Frisian
+Friulian
+Fulani
+Ga
+Galician
+Georgian
+German
+Greek
+Guarani
+Gujarati
+Haitian Creole
+Hakha Chin
+Hausa
+Hawaiian
+Hebrew
+Hiligaynon
+Hindi
+Hmong
+Hungarian
+Hunsrik
+Iban
+Icelandic
+Igbo
+Ilocano
+Indonesian
+Inuktut (Latin)
+Inuktut (Syllabics)
+Irish Gaelic
+Italian
+Jamaican Patois
+Japanese
+Javanese
+Jingpo
+Kalaallisut
+Kannada
+Kanuri
+Kapampangan
+Kazakh
+Khasi
+Khmer
+Kiga
+Kikongo
+Kinyarwanda
+Kituba
+Kokborok
+Komi
+Konkani
+Korean
+Krio
+Kurdish (Kurmanji)
+Kurdish (Sorani)
+Kyrgyz
+Lao
+Latgalian
+Latin
+Latvian
+Ligurian
+Limburgish
+Lingala
+Lithuanian
+Lombard
+Luganda
+Luo
+Luxembourgish
+Macedonian
+Madurese
+Maithili
+Makassar
+Malagasy
+Malay
+Malay (Jawi)
+Malayalam
+Maltese
+Mam
+Manx
+Maori
+Marathi
+Marshallese
+Marwadi
+Mauritian Creole
+Meadow Mari
+Meiteilon (Manipuri)
+Minang
+Mizo
+Mongolian
+Myanmar (Burmese)
+N'Ko
+Nahuatl (Eastern Huasteca)
+Ndau
+Ndebele (South)
+Nepal Bhasa (Newari)
+Nepali
+Norwegian
+Nuer
+Occitan
+Odia (Oriya)
+Oromo
+Ossetian
+Pangasinan
+Papiamento
+Pashto
+Persian
+Polish
+Portuguese (Brazil)
+Portuguese (Portugal)
+Punjabi (Gurmukhi)
+Punjabi (Shahmukhi)
+Quechua
+Qʼeqchiʼ
+Romani
+Romanian
+Rundi
+Russian
+Sami (North)
+Samoan
+Sango
+Sanskrit
+Santali (Latin)
+Santali (Ol Chiki)
+Scots Gaelic
+Sepedi
+Serbian
+Sesotho
+Seychellois Creole
+Shan
+Shona
+Sicilian
+Silesian
+Sindhi
+Sinhala
+Slovak
+Slovenian
+Somali
+Spanish
+Sundanese
+Susu
+Swahili
+Swati
+Swedish
+Tahitian
+Tajik
+Tamazight
+Tamazight (Tifinagh)
+Tamil
+Tatar
+Telugu
+Tetum
+Thai
+Tibetan
+Tigrinya
+Tiv
+Tok Pisin
+Tongan
+Tshiluba
+Tsonga
+Tswana
+Tulu
+Tumbuka
+Turkish
+Turkmen
+Tuvan
+Twi
+Udmurt
+Ukrainian
+Urdu
+Uyghur
+Uzbek
+Venda
+Venetian
+Vietnamese
+Waray
+Welsh
+Wolof
+Xhosa
+Yakut
+Yiddish
+Yoruba
+Yucatec Maya
+Zapotec
+Zulu
+Powered by
+Dashboard
+Quick Links
+Dashboard
+Users
+Deposits
+All
+Manual Methods
+Add New Method
+Automatic Gateways
+Withdrawals
+Investments
+Transactions
+FAQs
+Support Tickets
+Reviews
+Team Members
+Blogs
+Settings
+System
+Core
+Logo & SEO
+Sections
+Security & OTP
+Email Setting
+Livechat
+Theme Manager
+Miscellaneous
+Custom CSS
+Custom JS
+Custom PHP
+Deposit Details
+back
+Date:	15.07.2026 12:33:51
+User:	Test Trader
+Amount:	USD5,000.00
+Payment Method:	Bank Transfer USD
+Payment Method Amount:	5000USD
+Deposit Charge:	USD0.00
+Status:	pending
+Additional Info	
+
+
+Process
+	
+Delete
+© 2023 Emperor | All Rights Reserved
+//all scripts added here would be loaded globally //always start with an opening and closing tag
+
+
+=== ETH/USDT TRADE PAGE ===
+URL: http://127.0.0.1:8000/user/trading/trade/ETH/USDT
+
+IFRAMES: []
+
+FORMS: []
+
+INPUTS: [
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "1895.5",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "number",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "range",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "",
+    "id": "market-buy-total"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "1895.5",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "number",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "range",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "",
+    "id": "market-sell-total"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "1895.5",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "number",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "range",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "",
+    "id": "limit-buy-total"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "1895.5",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "number",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "range",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "",
+    "id": "limit-sell-total"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "1895.5",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "number",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "range",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "",
+    "id": "stop-limit-buy-total"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "1895.5",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "number",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "range",
+    "placeholder": "",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "placeholder": "",
+    "id": "stop-limit-sell-total"
+  }
+]
+
+BUTTONS: []
+
+LINKS: [
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "ETH/USDT"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/dashboard",
+    "text": "Dashboard"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/dashboard",
+    "text": "Dashboard"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT#market",
+    "text": "Trade"
+  },
+  {
+    "href": "https://trading-wallet.net/user/trading/demo/ETH/USDT",
+    "text": "Trade History"
+  },
+  {
+    "href": "https://trading-wallet.net/user/trading/demo/",
+    "text": "Trading Chart"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "Buy/Long"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "Sell/Short"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "Buy"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "Sell"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "Buy"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT",
+    "text": "Sell"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT#market-trading",
+    "text": "market trading"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT#history",
+    "text": "history"
+  },
+  {
+    "href": "http://127.0.0.1:8000/user/trading/trade/ETH/USDT#active-orders",
+    "text": "Active Trades"
+  }
+]
+
+BODY TEXT:
+ETH/USDT
+DASHBOARD
+DASHBOARD
+BUY / SELL
+TRADE
+TRADE HISTORY
+TRADING CHART
+
+Buy ETH
+Available: 0.00000000 USDT
+
+Price
+USDT
+Hand
+ETH
+Leverage:  
+100%
+Total
+USDT
+Buy/Long
+
+Sell ETH
+Available: 0.00000000 ETH
+
+Price
+USDT
+Hand
+ETH
+Leverage:  
+100%
+Total
+USDT
+Sell/Short
+
+Last Price USDT
+
+1895.5
+
+Change USDT
+
+0.0386%
+
+High USDT
+
+1896.05
+
+Low USDT
+
+1896.05
+
+Volume 24Hr
+
+155876
+
+MARKET TRADING
+HISTORY
+Price
+
+1895.5
+	Volume
+
+-
+
+1895.43	1.516344
+1895.23	896.01357279
+1895.23	353.97400233
+1895.23	750.01073928
+1895.23	353.97400233
+1895.23	896.01357279
+1895.61	1.516488
+1895.5	1.5164
+1895.39	1856.96854931
+1895.39	1551.41083202
+ACTIVE TRADES

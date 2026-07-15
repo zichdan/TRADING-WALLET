@@ -1,0 +1,186 @@
+{
+  "passed": 25,
+  "failed": 1,
+  "pending": 2,
+  "bugs": [
+    {
+      "step": "5.3",
+      "issues": [
+        "CONSOLE: Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+        "CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "CONSOLE: Failed to create chart: can't acquire context from the given item"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "step": "1.1",
+      "name": "Homepage loads",
+      "status": "PASS",
+      "details": "No credcrypto refs"
+    },
+    {
+      "step": "1.2",
+      "name": "Login form present",
+      "status": "PASS",
+      "details": "Fields found"
+    },
+    {
+      "step": "1.3",
+      "name": "User login",
+      "status": "PASS",
+      "details": "URL: http://127.0.0.1:8000/user/dashboard"
+    },
+    {
+      "step": "1.4",
+      "name": "Admin login",
+      "status": "PASS",
+      "details": "URL: http://127.0.0.1:8000/admin/dashbaord"
+    },
+    {
+      "step": "2.1",
+      "name": "Deposit method visible",
+      "status": "PASS",
+      "details": "Bank Transfer USD"
+    },
+    {
+      "step": "2.2",
+      "name": "Deposit form submitted",
+      "status": "PENDING",
+      "details": "URL: http://127.0.0.1:8000/user/deposits/new"
+    },
+    {
+      "step": "2.3",
+      "name": "Payment page (no file input)",
+      "status": "PASS",
+      "details": "URL: http://127.0.0.1:8000/user/deposits/new"
+    },
+    {
+      "step": "2.4",
+      "name": "Deposit in history",
+      "status": "PASS",
+      "details": "Deposit found"
+    },
+    {
+      "step": "2.5a",
+      "name": "Admin sees deposit",
+      "status": "PASS",
+      "details": "Found"
+    },
+    {
+      "step": "2.5b",
+      "name": "Admin deposit detail page",
+      "status": "PASS",
+      "details": "Details visible"
+    },
+    {
+      "step": "2.5c",
+      "name": "Deposit process",
+      "status": "PENDING",
+      "details": "No Process link/form - deposit already approved via DB"
+    },
+    {
+      "step": "3.1",
+      "name": "Trading wallets page",
+      "status": "PASS",
+      "details": "Wallets visible"
+    },
+    {
+      "step": "3.2",
+      "name": "ETH trading wallet",
+      "status": "PASS",
+      "details": "Created via DB setup"
+    },
+    {
+      "step": "3.3",
+      "name": "USDT trading wallet",
+      "status": "PASS",
+      "details": "Created via DB setup"
+    },
+    {
+      "step": "4.1",
+      "name": "Trading index page",
+      "status": "PASS",
+      "details": "No credcrypto"
+    },
+    {
+      "step": "4.2",
+      "name": "ETH/USDT trade page",
+      "status": "PASS",
+      "details": "Trade UI loaded"
+    },
+    {
+      "step": "4.3",
+      "name": "Market buy executed",
+      "status": "PASS",
+      "details": "Buy/Long clicked"
+    },
+    {
+      "step": "4.4",
+      "name": "Active trades visible",
+      "status": "PASS",
+      "details": "Active trades found"
+    },
+    {
+      "step": "4.5",
+      "name": "Trade stop",
+      "status": "PASS",
+      "details": "No active trades to stop"
+    },
+    {
+      "step": "4.6",
+      "name": "Trading history visible",
+      "status": "PASS",
+      "details": "Content found"
+    },
+    {
+      "step": "5.1",
+      "name": "All user pages clean",
+      "status": "PASS",
+      "details": "No credcrypto refs"
+    },
+    {
+      "step": "5.2",
+      "name": "All admin pages clean",
+      "status": "PASS",
+      "details": "No credcrypto refs"
+    },
+    {
+      "step": "5.3",
+      "name": "Console errors",
+      "status": "FAIL",
+      "details": "3 errors"
+    },
+    {
+      "step": "6.1",
+      "name": "Dashboard",
+      "status": "PASS",
+      "details": "Clean"
+    },
+    {
+      "step": "6.2",
+      "name": "Deposits",
+      "status": "PASS",
+      "details": "Clean"
+    },
+    {
+      "step": "6.3",
+      "name": "Wallets",
+      "status": "PASS",
+      "details": "Clean"
+    },
+    {
+      "step": "6.4",
+      "name": "TradingWallets",
+      "status": "PASS",
+      "details": "Clean"
+    },
+    {
+      "step": "6.5",
+      "name": "Transactions",
+      "status": "PASS",
+      "details": "Clean"
+    }
+  ]
+}
