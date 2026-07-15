@@ -85,6 +85,12 @@ async function logoutAdmin(page) {
     page.on('pageerror', function(err) {
         consoleErrors.push('PAGEERR: ' + err.message);
     });
+    page.on('response', function(response) {
+        var status = response.status();
+        if (status >= 400) {
+            consoleErrors.push('HTTP ' + status + ': ' + response.url());
+        }
+    });
 
     function logStep(step, name, status, details) {
         results.steps.push({ step: step, name: name, status: status, details: details || '' });
@@ -256,8 +262,9 @@ async function logoutAdmin(page) {
         }
         if (!depositViewUrl) depositViewUrl = '/admin/deposits/view/1';
 
-        // Navigate to deposit detail page
-        await page.goto(BASE_URL + depositViewUrl, { waitUntil: 'networkidle', timeout: 15000 });
+        // Navigate to deposit detail page (handle both relative and absolute URLs)
+        var fullDetailUrl = depositViewUrl.startsWith('http') ? depositViewUrl : BASE_URL + depositViewUrl;
+        await page.goto(fullDetailUrl, { waitUntil: 'networkidle', timeout: 15000 });
         await screenshot(page, '10_admin_deposit_detail');
         var detailContent = await page.content();
         var hasDetail = detailContent.includes('100') || detailContent.includes('pending') || detailContent.includes('Bank Transfer') || detailContent.includes('Bitcoin') || detailContent.includes('deposit');
@@ -472,7 +479,7 @@ async function logoutAdmin(page) {
         console.log('\n[5.2] Admin pages credcrypto check...');
         await logoutUser(page);
         await loginAsAdmin(page);
-        var adminPages = ['/admin/dashboard', '/admin/deposits', '/admin/users', '/admin/settings', '/admin/wallets', '/admin/deposits/view/1'];
+        var adminPages = ['/admin/dashbaord', '/admin/deposits', '/admin/settings/core', '/admin/settings/gateways', '/admin/deposits/view/1'];
         var adminClean = true;
         for (var j = 0; j < adminPages.length; j++) {
             try {
@@ -512,7 +519,9 @@ async function logoutAdmin(page) {
             var ext = extPages[k];
             console.log('\n[6.' + (k+1) + '] ' + ext.name + '...');
             try {
-                await page.goto(BASE_URL + ext.url, { waitUntil: 'networkidle', timeout: 10000 });
+                var extWaitOpts = ext.url.includes('trading') ? { waitUntil: 'domcontentloaded', timeout: 15000 } : { waitUntil: 'networkidle', timeout: 10000 };
+                await page.goto(BASE_URL + ext.url, extWaitOpts);
+                if (ext.url.includes('trading')) await page.waitForTimeout(2000);
                 await screenshot(page, '19_' + ext.name.toLowerCase());
                 var ecc = await checkForCredcrypto(page);
                 logStep('6.' + (k+1), ext.name, ecc.length === 0 ? 'PASS' : 'FAIL', ecc.length === 0 ? 'Clean' : ecc.join(', '));

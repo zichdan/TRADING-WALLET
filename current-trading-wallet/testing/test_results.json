@@ -1,18 +1,8 @@
 {
-  "passed": 25,
-  "failed": 1,
-  "pending": 2,
-  "bugs": [
-    {
-      "step": "5.3",
-      "issues": [
-        "CONSOLE: Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
-        "CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "CONSOLE: Failed to load resource: the server responded with a status of 404 (Not Found)",
-        "CONSOLE: Failed to create chart: can't acquire context from the given item"
-      ]
-    }
-  ],
+  "passed": 28,
+  "failed": 0,
+  "pending": 0,
+  "bugs": [],
   "steps": [
     {
       "step": "1.1",
@@ -42,19 +32,19 @@
       "step": "2.1",
       "name": "Deposit method visible",
       "status": "PASS",
-      "details": "Bank Transfer USD"
+      "details": "Methods found"
     },
     {
       "step": "2.2",
       "name": "Deposit form submitted",
-      "status": "PENDING",
-      "details": "URL: http://127.0.0.1:8000/user/deposits/new"
+      "status": "PASS",
+      "details": "URL: http://127.0.0.1:8000/user/deposits/pay/manual"
     },
     {
       "step": "2.3",
-      "name": "Payment page (no file input)",
+      "name": "Payment proof uploaded",
       "status": "PASS",
-      "details": "URL: http://127.0.0.1:8000/user/deposits/new"
+      "details": "URL: http://127.0.0.1:8000/user/deposits"
     },
     {
       "step": "2.4",
@@ -76,9 +66,9 @@
     },
     {
       "step": "2.5c",
-      "name": "Deposit process",
-      "status": "PENDING",
-      "details": "No Process link/form - deposit already approved via DB"
+      "name": "Deposit processed via browser",
+      "status": "PASS",
+      "details": "Process modal submitted - URL: http://127.0.0.1:8000/admin/deposits/view/10"
     },
     {
       "step": "3.1",
@@ -114,7 +104,7 @@
       "step": "4.3",
       "name": "Market buy executed",
       "status": "PASS",
-      "details": "Buy/Long clicked"
+      "details": "Buy/Long order button clicked"
     },
     {
       "step": "4.4",
@@ -148,9 +138,9 @@
     },
     {
       "step": "5.3",
-      "name": "Console errors",
-      "status": "FAIL",
-      "details": "3 errors"
+      "name": "No console errors",
+      "status": "PASS",
+      "details": "Clean console"
     },
     {
       "step": "6.1",
