@@ -97,9 +97,9 @@
                                         data-toggle="tab" class="active">{{ ct('Trade') }}</a>
                                 </li>
                                   
-                                <li role="presentation"><a href="https://trading-wallet.net/user/trading/demo/{{ $symbol_1 }}/{{ $symbol_2 }}">{{ ct('Trade History') }}</a>
+                                <li role="presentation"><a href="{{ route('user.trading.trade.index') }}">{{ ct('Trade History') }}</a>
                                 </li>
-                                <li role="presentation"><a href="https://trading-wallet.net/user/trading/demo/">{{ ct('Trading Chart') }}</a>
+                                <li role="presentation"><a href="{{ route('user.trading.trade.index') }}">{{ ct('Trading Chart') }}</a>
                                 </li>
                                
 
@@ -634,6 +634,15 @@
     </div>
 <div class="container-fluid">
         <div class="row sm-gutters">
+            <div class="col-xl-12">
+                <div class="crypt-dark-segment">
+                    <div id="crypt-candle-chart" style="width:100%;height:400px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid">
+        <div class="row sm-gutters">
 
             <div class="col-xl-12">
                 <div>
@@ -766,12 +775,14 @@
                 // get the href
                 var reloadUrl = $(location).attr("href");
                 $.get(reloadUrl).done(function(r) {
-                    var newDom = $(r);
-                    $('#last-price').replaceWith($('#last-price',newDom));
-                    $('#lasty-price').replaceWith($('#lasty-price',newDom));
-                    $('#las-price').replaceWith($('#las-price',newDom));
-                    $('#cur-price').replaceWith($('#cur-price',newDom));
-                });
+                    try {
+                        var newDom = $(r);
+                        $('#last-price').replaceWith($('#last-price',newDom));
+                        $('#lasty-price').replaceWith($('#lasty-price',newDom));
+                        $('#las-price').replaceWith($('#las-price',newDom));
+                        $('#cur-price').replaceWith($('#cur-price',newDom));
+                    } catch(e) {}
+                }).fail(function() {});
             }, 5000);
 
         });
@@ -922,7 +933,7 @@
 
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                var redirectToURL = 'https://trading-wallet.net/user/trading/trade/{{ $symbol_1 }}/{{ $symbol_2 }}/#active-orders';
+                                var redirectToURL = '{{ route('user.trading.trade.trade', ['symbol1' => $symbol_1, 'symbol2' => $symbol_2]) }}#active-orders';
                                 window.location.href = redirectToURL;
                             }
                         });
@@ -992,7 +1003,7 @@
 
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            var redirectToURL = 'https://trading-wallet.net/user/trading/demo/{{ $symbol_1 }}/{{ $symbol_2 }}';
+                            var redirectToURL = '{{ route('user.trading.trade.trade', ['symbol1' => $symbol_1, 'symbol2' => $symbol_2]) }}';
                                 window.location.href = redirectToURL;
                         }
                     });
