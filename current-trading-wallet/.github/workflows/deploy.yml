@@ -1,0 +1,158 @@
+name: Deploy TradingWallet to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, xml, curl, zip, bcmath, gd, pdo, pdo_mysql, intl, ioncube
+          coverage: none
+
+      - name: Install Composer Dependencies
+        run: composer install --no-progress --prefer-dist --optimize-autoloader --no-dev
+        working-directory: core
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Create Release & Deploy Files
+        run: |
+          RELEASE=$(date +%Y-%m-%d_%H-%M-%S)
+          echo "RELEASE=$RELEASE" >> $GITHUB_ENV
+          DEPLOY_PATH=${{ secrets.DEPLOY_PATH }}
+
+          ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} \
+            "mkdir -p $DEPLOY_PATH/releases/$RELEASE"
+
+          rsync -avz \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.SSH_PORT }}" \
+            --exclude='.git' \
+            --exclude='.env' \
+            --exclude='.env.backup' \
+            --exclude='node_modules' \
+            --exclude='.github' \
+            --exclude='storage' \
+            --exclude='testing' \
+            --exclude='test-results' \
+            --exclude='screenshots' \
+            --exclude='.cpanel.yml' \
+            --exclude='.deploy-exclude' \
+            --exclude='artisan-runner.php' \
+            --exclude='setup-check.php' \
+            --exclude='fix_*.php' \
+            --exclude='check_*.php' \
+            --exclude='seed_*.php' \
+            --exclude='enable_modules.php' \
+            --exclude='list_routes.php' \
+            --exclude='server-router.php' \
+            --exclude='DEPLOYMENT_GUIDE.md' \
+            --exclude='IonCube.md' \
+            --exclude='README.md' \
+            --exclude='SECURITY_AUDIT.md' \
+            --exclude='implementation_plan.md' \
+            --exclude='tasks_artifacts.md' \
+            --exclude='walkthrough.md' \
+            --exclude='*.sql' \
+            ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/releases/$RELEASE/
+
+      - name: Activate Release & Run Artisan Commands
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -euo pipefail
+            BASE=${{ secrets.DEPLOY_PATH }}
+            RELEASE=${{ env.RELEASE }}
+
+            ln -sf $BASE/shared/.env $BASE/releases/$RELEASE/core/.env
+            ln -sf $BASE/shared/storage $BASE/releases/$RELEASE/core/storage
+
+            ln -sfn $BASE/releases/$RELEASE $BASE/current
+
+            cd $BASE/current/core
+            php artisan storage:link
+            php artisan migrate --force
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+            php artisan optimize:clear
+            php artisan config:cache
+
+            chmod -R 755 storage bootstrap/cache
+
+            ls -dt $BASE/releases/*/ | tail -n +6 | xargs rm -rf
+
+            echo "✅ Deployment completed: $RELEASE"
+
+      - name: Setup public_html symlink (first deployment only)
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            BASE=${{ secrets.DEPLOY_PATH }}
+            if [ ! -L ~/public_html ]; then
+              if [ -d ~/public_html ]; then
+                mv ~/public_html ~/public_html_backup_$(date +%s)
+              fi
+              ln -s $BASE/current ~/public_html
+              echo "✅ public_html symlink created"
+            else
+              echo "ℹ️ public_html is already a symlink"
+            fi
+
+  rollback:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: failure()
+
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Rollback to previous release
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            BASE=${{ secrets.DEPLOY_PATH }}
+            PREV=$(ls -t $BASE/releases/ | sed -n '2p')
+            if [ -n "$PREV" ]; then
+              ln -sfn $BASE/releases/$PREV $BASE/current
+              cd $BASE/current/core
+              php artisan config:cache
+              php artisan route:cache
+              php artisan view:cache
+              echo "✅ Rolled back to: $PREV"
+            else
+              echo "❌ No previous release found for rollback"
+            fi

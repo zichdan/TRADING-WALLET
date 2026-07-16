@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/$USER/public_html
+    - /bin/rsync -avz --exclude-from='.deploy-exclude' ./ $DEPLOYPATH/
+    - /bin/chmod -R 755 $DEPLOYPATH/core/storage $DEPLOYPATH/core/bootstrap/cache
