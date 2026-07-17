@@ -1,0 +1,95 @@
+name: Deploy TradingWallet to FimgoHost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, xml, curl, zip, bcmath, gd, pdo, pdo_mysql, intl, ioncube
+          coverage: none
+
+      - name: Install Composer Dependencies
+        run: composer install --no-progress --prefer-dist --optimize-autoloader --no-dev
+        working-directory: core
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.FIMGO_SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p ${{ secrets.FIMGO_SSH_PORT }} -H ${{ secrets.FIMGO_SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy files to FimgoHost
+        run: |
+          DEPLOY_PATH=${{ secrets.FIMGO_DEPLOY_PATH }}
+
+          rsync -avz \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.FIMGO_SSH_PORT }}" \
+            --exclude='.git' \
+            --exclude='.env' \
+            --exclude='.env.backup' \
+            --exclude='node_modules' \
+            --exclude='.github' \
+            --exclude='storage' \
+            --exclude='testing' \
+            --exclude='test-results' \
+            --exclude='screenshots' \
+            --exclude='.cpanel.yml' \
+            --exclude='.cpanel.fimgo.yml' \
+            --exclude='.deploy-exclude' \
+            --exclude='.deploy-exclude.fimgo' \
+            --exclude='artisan-runner.php' \
+            --exclude='setup-check.php' \
+            --exclude='fix_*.php' \
+            --exclude='check_*.php' \
+            --exclude='seed_*.php' \
+            --exclude='enable_modules.php' \
+            --exclude='list_routes.php' \
+            --exclude='server-router.php' \
+            --exclude='DEPLOYMENT_GUIDE.md' \
+            --exclude='FIMGO_DEPLOYMENT_GUIDE.md' \
+            --exclude='IonCube.md' \
+            --exclude='README.md' \
+            --exclude='SECURITY_AUDIT.md' \
+            --exclude='implementation_plan.md' \
+            --exclude='tasks_artifacts.md' \
+            --exclude='walkthrough.md' \
+            --exclude='vendor.zip' \
+            --exclude='*.sql' \
+            ./ ${{ secrets.FIMGO_SSH_USERNAME }}@${{ secrets.FIMGO_SSH_HOST }}:$DEPLOY_PATH/public_html/
+
+      - name: Run Artisan Commands on FimgoHost
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.FIMGO_SSH_HOST }}
+          username: ${{ secrets.FIMGO_SSH_USERNAME }}
+          key: ${{ secrets.FIMGO_SSH_PRIVATE_KEY }}
+          port: ${{ secrets.FIMGO_SSH_PORT }}
+          script: |
+            set -euo pipefail
+            cd ~/public_html/core
+
+            php artisan storage:link || true
+            php artisan migrate --force
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+            php artisan optimize:clear
+            php artisan config:cache
+
+            chmod -R 755 storage bootstrap/cache
+
+            echo "FimgoHost deployment completed successfully"
